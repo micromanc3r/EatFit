@@ -1,0 +1,673 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		20947945205878C00054EDA4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20947944205878C00054EDA4 /* AppDelegate.swift */; };
+		20947947205878C00054EDA4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20947946205878C00054EDA4 /* ViewController.swift */; };
+		2094794A205878C00054EDA4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20947948205878C00054EDA4 /* Main.storyboard */; };
+		2094794C205878C00054EDA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2094794B205878C00054EDA4 /* Assets.xcassets */; };
+		2094794F205878C00054EDA4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2094794D205878C00054EDA4 /* LaunchScreen.storyboard */; };
+		2094795A205878C00054EDA4 /* EatFitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20947959205878C00054EDA4 /* EatFitTests.swift */; };
+		20B2648E20587AA200A95FCF /* food.csv in Resources */ = {isa = PBXBuildFile; fileRef = 20B2648D20587AA200A95FCF /* food.csv */; };
+		20B264952058848400A95FCF /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B264942058848300A95FCF /* R.generated.swift */; };
+		6CC75618530B14EEE01A33D3 /* Pods_EatFitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81B7835FB7B9452FC3338677 /* Pods_EatFitTests.framework */; };
+		A646414819511092CAEC1FC5 /* Pods_EatFit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CECFB6AE15E410617FE86BE /* Pods_EatFit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		20947956205878C00054EDA4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 20947939205878C00054EDA4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 20947940205878C00054EDA4;
+			remoteInfo = EatFit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		20947941205878C00054EDA4 /* EatFit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EatFit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		20947944205878C00054EDA4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		20947946205878C00054EDA4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		20947949205878C00054EDA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2094794B205878C00054EDA4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2094794E205878C00054EDA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		20947950205878C00054EDA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		20947955205878C00054EDA4 /* EatFitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EatFitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		20947959205878C00054EDA4 /* EatFitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EatFitTests.swift; sourceTree = "<group>"; };
+		2094795B205878C00054EDA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		20B2648D20587AA200A95FCF /* food.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = food.csv; sourceTree = "<group>"; };
+		20B264942058848300A95FCF /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		3B8435A4DA7B35D782FBEA88 /* Pods-EatFit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EatFit.release.xcconfig"; path = "Pods/Target Support Files/Pods-EatFit/Pods-EatFit.release.xcconfig"; sourceTree = "<group>"; };
+		81B7835FB7B9452FC3338677 /* Pods_EatFitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EatFitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9CECFB6AE15E410617FE86BE /* Pods_EatFit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EatFit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFB9E723D734BDDC59A19A7E /* Pods-EatFit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EatFit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EatFit/Pods-EatFit.debug.xcconfig"; sourceTree = "<group>"; };
+		DE1AF5BE34109F15160F960D /* Pods-EatFitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EatFitTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EatFitTests/Pods-EatFitTests.release.xcconfig"; sourceTree = "<group>"; };
+		FAF297E253BF2C66C5CB2079 /* Pods-EatFitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EatFitTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EatFitTests/Pods-EatFitTests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2094793E205878C00054EDA4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A646414819511092CAEC1FC5 /* Pods_EatFit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		20947952205878C00054EDA4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6CC75618530B14EEE01A33D3 /* Pods_EatFitTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0007BDC752C9D69EE632A583 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9CECFB6AE15E410617FE86BE /* Pods_EatFit.framework */,
+				81B7835FB7B9452FC3338677 /* Pods_EatFitTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		20947938205878C00054EDA4 = {
+			isa = PBXGroup;
+			children = (
+				20947943205878C00054EDA4 /* EatFit */,
+				20947958205878C00054EDA4 /* EatFitTests */,
+				20947942205878C00054EDA4 /* Products */,
+				6E88ECC8AD57E5779564D279 /* Pods */,
+				0007BDC752C9D69EE632A583 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		20947942205878C00054EDA4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				20947941205878C00054EDA4 /* EatFit.app */,
+				20947955205878C00054EDA4 /* EatFitTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		20947943205878C00054EDA4 /* EatFit */ = {
+			isa = PBXGroup;
+			children = (
+				20947944205878C00054EDA4 /* AppDelegate.swift */,
+				20947946205878C00054EDA4 /* ViewController.swift */,
+				20B264942058848300A95FCF /* R.generated.swift */,
+				20947948205878C00054EDA4 /* Main.storyboard */,
+				2094794B205878C00054EDA4 /* Assets.xcassets */,
+				2094794D205878C00054EDA4 /* LaunchScreen.storyboard */,
+				20B2648D20587AA200A95FCF /* food.csv */,
+				20947950205878C00054EDA4 /* Info.plist */,
+			);
+			path = EatFit;
+			sourceTree = "<group>";
+		};
+		20947958205878C00054EDA4 /* EatFitTests */ = {
+			isa = PBXGroup;
+			children = (
+				20947959205878C00054EDA4 /* EatFitTests.swift */,
+				2094795B205878C00054EDA4 /* Info.plist */,
+			);
+			path = EatFitTests;
+			sourceTree = "<group>";
+		};
+		6E88ECC8AD57E5779564D279 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CFB9E723D734BDDC59A19A7E /* Pods-EatFit.debug.xcconfig */,
+				3B8435A4DA7B35D782FBEA88 /* Pods-EatFit.release.xcconfig */,
+				FAF297E253BF2C66C5CB2079 /* Pods-EatFitTests.debug.xcconfig */,
+				DE1AF5BE34109F15160F960D /* Pods-EatFitTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		20947940205878C00054EDA4 /* EatFit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2094795E205878C00054EDA4 /* Build configuration list for PBXNativeTarget "EatFit" */;
+			buildPhases = (
+				0976DDAC99C8B2D1814D305B /* [CP] Check Pods Manifest.lock */,
+				20B264932058843900A95FCF /* ShellScript */,
+				20B2648F2058835F00A95FCF /* ShellScript */,
+				20B264902058837E00A95FCF /* ShellScript */,
+				20B26491205883F900A95FCF /* ShellScript */,
+				2094793D205878C00054EDA4 /* Sources */,
+				2094793E205878C00054EDA4 /* Frameworks */,
+				2094793F205878C00054EDA4 /* Resources */,
+				70A14FFB3489B18C534A18BE /* [CP] Embed Pods Frameworks */,
+				4DF829396DBB257F47801C41 /* [CP] Copy Pods Resources */,
+				20B264922058841100A95FCF /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EatFit;
+			productName = EatFit;
+			productReference = 20947941205878C00054EDA4 /* EatFit.app */;
+			productType = "com.apple.product-type.application";
+		};
+		20947954205878C00054EDA4 /* EatFitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 20947961205878C00054EDA4 /* Build configuration list for PBXNativeTarget "EatFitTests" */;
+			buildPhases = (
+				97DCE237907462C37176ACFD /* [CP] Check Pods Manifest.lock */,
+				20947951205878C00054EDA4 /* Sources */,
+				20947952205878C00054EDA4 /* Frameworks */,
+				20947953205878C00054EDA4 /* Resources */,
+				222DE6BF01F37213BB8B4DDA /* [CP] Embed Pods Frameworks */,
+				1C94750599624941C61019C6 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				20947957205878C00054EDA4 /* PBXTargetDependency */,
+			);
+			name = EatFitTests;
+			productName = EatFitTests;
+			productReference = 20947955205878C00054EDA4 /* EatFitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		20947939205878C00054EDA4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = micromanc3r;
+				TargetAttributes = {
+					20947940205878C00054EDA4 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					20947954205878C00054EDA4 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 20947940205878C00054EDA4;
+					};
+				};
+			};
+			buildConfigurationList = 2094793C205878C00054EDA4 /* Build configuration list for PBXProject "EatFit" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 20947938205878C00054EDA4;
+			productRefGroup = 20947942205878C00054EDA4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				20947940205878C00054EDA4 /* EatFit */,
+				20947954205878C00054EDA4 /* EatFitTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2094793F205878C00054EDA4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2094794F205878C00054EDA4 /* LaunchScreen.storyboard in Resources */,
+				2094794C205878C00054EDA4 /* Assets.xcassets in Resources */,
+				20B2648E20587AA200A95FCF /* food.csv in Resources */,
+				2094794A205878C00054EDA4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		20947953205878C00054EDA4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0976DDAC99C8B2D1814D305B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EatFit-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1C94750599624941C61019C6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EatFitTests/Pods-EatFitTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		20B2648F2058835F00A95FCF /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftFormat/CommandLineTool/swiftformat\" --commas inline --exclude \"${SRCROOT}\"/Pods/ \"${SRCROOT}\"";
+		};
+		20B264902058837E00A95FCF /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+		20B26491205883F900A95FCF /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Set the build number to the count of Git commits\nbuildNumber=$(git rev-list --count HEAD)\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\"";
+		};
+		20B264922058841100A95FCF /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Set the build number to \"DEVELOPMENT\"\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion DEVELOPMENT\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\"";
+		};
+		20B264932058843900A95FCF /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT\"";
+		};
+		222DE6BF01F37213BB8B4DDA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EatFitTests/Pods-EatFitTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4DF829396DBB257F47801C41 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EatFit/Pods-EatFit-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		70A14FFB3489B18C534A18BE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-EatFit/Pods-EatFit-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Cartography/Cartography.framework",
+				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cartography.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EatFit/Pods-EatFit-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		97DCE237907462C37176ACFD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EatFitTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2094793D205878C00054EDA4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20947947205878C00054EDA4 /* ViewController.swift in Sources */,
+				20947945205878C00054EDA4 /* AppDelegate.swift in Sources */,
+				20B264952058848400A95FCF /* R.generated.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		20947951205878C00054EDA4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2094795A205878C00054EDA4 /* EatFitTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		20947957205878C00054EDA4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 20947940205878C00054EDA4 /* EatFit */;
+			targetProxy = 20947956205878C00054EDA4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		20947948205878C00054EDA4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				20947949205878C00054EDA4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2094794D205878C00054EDA4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2094794E205878C00054EDA4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2094795C205878C00054EDA4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2094795D205878C00054EDA4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2094795F205878C00054EDA4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CFB9E723D734BDDC59A19A7E /* Pods-EatFit.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 65NTCVYUA7;
+				INFOPLIST_FILE = EatFit/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.micro.bfit.eatfit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		20947960205878C00054EDA4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B8435A4DA7B35D782FBEA88 /* Pods-EatFit.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 65NTCVYUA7;
+				INFOPLIST_FILE = EatFit/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.micro.bfit.eatfit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		20947962205878C00054EDA4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FAF297E253BF2C66C5CB2079 /* Pods-EatFitTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 65NTCVYUA7;
+				INFOPLIST_FILE = EatFitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.micro.EatFitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EatFit.app/EatFit";
+			};
+			name = Debug;
+		};
+		20947963205878C00054EDA4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE1AF5BE34109F15160F960D /* Pods-EatFitTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 65NTCVYUA7;
+				INFOPLIST_FILE = EatFitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.micro.EatFitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EatFit.app/EatFit";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2094793C205878C00054EDA4 /* Build configuration list for PBXProject "EatFit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2094795C205878C00054EDA4 /* Debug */,
+				2094795D205878C00054EDA4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2094795E205878C00054EDA4 /* Build configuration list for PBXNativeTarget "EatFit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2094795F205878C00054EDA4 /* Debug */,
+				20947960205878C00054EDA4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		20947961205878C00054EDA4 /* Build configuration list for PBXNativeTarget "EatFitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				20947962205878C00054EDA4 /* Debug */,
+				20947963205878C00054EDA4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 20947939205878C00054EDA4 /* Project object */;
+}

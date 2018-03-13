@@ -1,0 +1,21 @@
+PODS:
+  - Cartography (3.0.1)
+  - R.swift (4.0.0):
+    - R.swift.Library (~> 4.0.0)
+  - R.swift.Library (4.0.0)
+  - SwiftFormat/CLI (0.33.4)
+
+DEPENDENCIES:
+  - Cartography
+  - R.swift
+  - SwiftFormat/CLI
+
+SPEC CHECKSUMS:
+  Cartography: f8c899bb0f5cf20758644a8eea59a75e98a03a5d
+  R.swift: d6a5ec2f55a8441dc0ed9f1f8b37d7d11ae85c66
+  R.swift.Library: c3af34921024333546e23b70e70d0b4e0cffca75
+  SwiftFormat: f39044d75d5e58dbbc7c436c089104ec9c8f717a
+
+PODFILE CHECKSUM: 9bd16e838db08f2443d05908b61283cb743b0b0a
+
+COCOAPODS: 1.4.0

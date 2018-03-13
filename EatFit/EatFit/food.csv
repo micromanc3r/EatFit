@@ -1,0 +1,125 @@
+name-sk,name-cs,name-en,weight,pieces,cereal,fruit,vegetable,milk,protein,fats
+amarant,amarant,,15,0,1,0,0,0,0,0
+pšeno,jáhly,,15,0,1,0,0,0,0,0
+pohánka,pohanka,,15,0,1,0,0,0,0,0
+quinoa,quinoa,,15,0,1,0,0,0,0,0
+zemiaky,brambory,,80,0,1,0,0,0,0,0
+bulgur,bulgur,,20,0,1,0,0,0,0,0
+kuskus,kuskus,,20,0,1,0,0,0,0,0
+cereálie,cereálie,,15,0,1,0,0,0,0,0
+flapjack reflex,flapjack reflex,,40,0,1,0,0,0,1,1
+racio chlebiky,racio chlebiky,,15,0,1,0,0,0,0,0
+kamut,kamut,,20,0,1,0,0,0,0,0
+špalda,špalda,,20,0,1,0,0,0,0,0
+gaštany,kaštany,,30,0,1,0,0,0,0,0
+knackerbrot,knackerbrot,,20,0,1,0,0,0,0,0
+krupy jačmenné,kroupy ječné,,15,0,1,0,0,0,0,0
+krupy špaldové,kroupy špaldové,,15,0,1,0,0,0,0,0
+kukuríčné lupienky,kukuričné lupínky,,15,0,1,0,0,0,0,0
+strukoviny,luštěniny,,50,0,2,0,0,0,1,0
+mäso sójové,maso sojové,,80,0,1,0,0,0,2,0
+múka celozrnná,mouka celozrnná,,20,0,1,0,0,0,0,0
+pečivo celozrnné,pečivo celozrnné,,20,0,1,0,0,0,0,0
+ryža natural,rýže natural,,20,0,1,0,0,0,0,0
+cestoviny celozrnné,těstoviny celozrnné,,20,0,1,0,0,0,0,0
+vločky obylné,vločky obylné,,15,0,1,0,0,0,0,0
+ananás,ananas,,130,0,0,1,0,0,0,0
+banány,banány,,50,0,0,1,0,0,0,0
+blumy,blumy,,100,0,0,1,0,0,0,0
+ryngle,ryngle,,100,0,0,1,0,0,0,0
+slivky,švestky,,100,0,0,1,0,0,0,0
+broskyne,broskve,,100,0,0,1,0,0,0,0
+marhule,meruňky,,100,0,0,1,0,0,0,0
+nektarinky,nektarinky,,100,0,0,1,0,0,0,0
+citrusy,citrusy,,110,0,0,1,0,0,0,0
+džús 100%,džus 100%,,100,0,0,1,0,0,0,0
+mošt 100%,mošt 100%,,100,0,0,1,0,0,0,0
+hrozno,hrozny,,70,0,0,1,0,0,0,0
+hrušky,hrušky,,80,0,0,1,0,0,0,0
+jablká,jablka,,80,0,0,1,0,0,0,0
+jahody,jahody,,150,0,0,1,0,0,0,0
+kiwi,kiwi,,120,0,0,1,0,0,0,0
+mango,mango,,70,0,0,1,0,0,0,0
+med,med,,15,0,0,1,0,0,0,0
+melón červený,meloun červený,,180,0,0,1,0,0,0,0
+melón žltý,meloun žlutý,,120,0,0,1,0,0,0,0
+ovocie sušené bez cukru,ovoce sušené bez cukru,,20,0,0,1,0,0,0,0
+plody lesné,plody lesní,,80,0,0,1,0,0,0,0
+šípky,šípky,,50,0,0,1,0,0,0,0
+čerešne,třešně,,100,0,0,1,0,0,0,0
+višne,višně,,100,0,0,1,0,0,0,0
+brokolica,brokolice,,100,0,0,0,1,0,0,0
+karfiol,květák,,100,0,0,0,1,0,0,0
+zeler,celer,,60,0,0,0,1,0,0,0
+petržlen,petržel,,60,0,0,0,1,0,0,0
+mrkva,karotka,,60,0,0,0,1,0,0,0
+cibuľa,cibule,,70,0,0,0,1,0,0,0
+šalotka,šalotka,,70,0,0,0,1,0,0,0
+pór,pórek,,70,0,0,0,1,0,0,0
+cuketa,cuketa,,160,0,0,0,1,0,0,0
+dyňa,dýně,,80,0,0,0,1,0,0,0
+hrášok zelený,hrášek zelený,,40,0,0,0,1,0,0,0
+huby čerstvé,houby čerstvé,,80,0,0,0,1,0,0,0
+špargľa,chřest,,130,0,0,0,1,0,0,0
+kel,kapusta,,120,0,0,0,1,0,0,0
+šalát,salát,,120,0,0,0,1,0,0,0
+kapusta,zelí,,120,0,0,0,1,0,0,0
+kaleráb,kedlubna,,140,0,0,0,1,0,0,0
+reďkev,ředkev,,140,0,0,0,1,0,0,0
+baklažán,lilek,,80,0,0,0,1,0,0,0
+tekvica,tykev,,80,0,0,0,1,0,0,0
+lusky fazuľové,lusky fazolové,,80,0,0,0,1,0,0,0
+uhorka šalátová,okurka salátová,,180,0,0,0,1,0,0,0
+paprika,paprika,,100,0,0,0,1,0,0,0
+kápia,kapie,,100,0,0,0,1,0,0,0
+patizón,patizon,,60,0,0,0,1,0,0,0
+paradajky,rajčata,,120,0,0,0,1,0,0,0
+repa červená,řepa červená,,60,0,0,0,1,0,0,0
+špenát listový,špenát listový,,100,0,0,0,1,0,0,0
+actimel prírodný,actimel přírodní,,260,0,0,0,0,1,0,0
+activia biela,activia bílá,,180,0,0,0,0,1,0,1
+activia biela nízkotučná,activia bílá nízkotučná,,200,0,0,0,0,1,0,0
+jofurt biely,jogurt bílý,,250,0,0,0,0,1,0,2
+jogurt biely nízkotučný,jogurt bílý nízkotučný,,250,0,0,0,0,1,0,0
+kyška,kyška,,280,0,0,0,0,1,0,1
+mlieko acidofilné,mléko acidofilní,,320,0,0,0,0,1,0,1
+mlieko kefírové,mléko kefírové,,320,0,0,0,0,1,0,1
+mlieko odtučnené,mléko odtučněné,,250,0,0,0,0,1,0,0
+mlieko polotučné,mléko polotučné,,250,0,0,0,0,1,0,1
+mlieko plnotučné,mléko plnotučné,,250,0,0,0,0,1,0,2
+mlieko sójové,mléko sojové,,300,0,0,0,0,1,0,1
+mlieko sušené odtučnené,mléko sušené odtučněné,,25,0,0,0,0,1,0,0
+cmar,podmáslí kysané,,240,0,0,0,0,1,0,0
+zákys,zákys,,320,0,0,0,0,1,0,1
+mäso červené,maso červené libové,,40,0,0,0,0,0,1,1
+mäso morčacie,maso krůtí,,40,0,0,0,0,0,1,0
+mäso kuracie,maso kuřecí,,40,0,0,0,0,0,1,0
+proteín srvátkový 80%,protein syrovátkový 80%,,10,0,0,0,0,0,1,0
+ryby netučné,ryby netučné,,50,0,0,0,0,0,1,0
+plody mora,plody moře,,50,0,0,0,0,0,1,0
+ryby tučné,ryby tučné,,40,0,0,0,0,0,1,1
+šmakoun,šmakoun,,60,0,0,0,0,0,1,0
+syry tvrdé do 30%,sýry tvrdé do 30%,,30,0,0,0,0,0,1,1
+syr cottage,sýr cottage,,80,0,0,0,0,0,1,1
+šunka nad 90%,šunka nad 90%,,40,0,0,0,0,0,1,0
+pečienky kuracie,játra kuřecí,,40,0,0,0,0,0,1,0
+tofu,tofu,,70,0,0,0,0,0,1,1
+tvaroh nízkotučný,tvaroh nízkotučný,,60,0,0,0,0,0,1,0
+tvaroh polotučný,tvaroh polotučný,,80,0,0,0,0,0,1,1
+syrečky olomoucké,tvarůžky olomoucké,,30,0,0,0,0,0,1,0
+vajíčka bielka,vejce bílek,,80,0,0,0,0,0,1,0
+vajíčka celé,vejce celé,,50,0,0,0,0,0,1,1
+avokádo,avokádo,,20,0,0,0,0,0,0,1
+pečienky tresčí,játra tresčí,,7,0,0,0,0,0,0,1
+mak,mák,,8,0,0,0,0,0,0,1
+mandle,mandle,,6,0,0,0,0,0,0,1
+margarín rastlinný,margarín rostlinný,,10,0,0,0,0,0,0,1
+maslo,máslo,,5,0,0,0,0,0,0,1
+maslo arašidové,máslo arašidové,,6,0,0,0,0,0,0,1
+olej rastlinný,olej rostlinný,,5,0,0,0,0,0,0,1
+olivy,olivy,,40,0,0,0,0,0,0,1
+orechy,ořechy,,6,0,0,0,0,0,0,1
+samienka,semínka,,8,0,0,0,0,0,0,1
+smotana zakysaná,smetana zakysaná,,20,0,0,0,0,0,0,1
+syr lučina,sýr lučina,,15,0,0,0,0,0,0,1
+tahini,tahini,,6,0,0,0,0,0,0,1
