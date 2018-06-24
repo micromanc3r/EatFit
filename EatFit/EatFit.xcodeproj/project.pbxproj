@@ -16,6 +16,7 @@
 		20B2648E20587AA200A95FCF /* food.csv in Resources */ = {isa = PBXBuildFile; fileRef = 20B2648D20587AA200A95FCF /* food.csv */; };
 		20B264952058848400A95FCF /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B264942058848300A95FCF /* R.generated.swift */; };
 		6CC75618530B14EEE01A33D3 /* Pods_EatFitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81B7835FB7B9452FC3338677 /* Pods_EatFitTests.framework */; };
+		6DC2AC8920E044A000A02C9C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6DC2AC8820E044A000A02C9C /* Localizable.strings */; };
 		6DCE573320E03E8F00AB9E64 /* MealComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DCE573220E03E8F00AB9E64 /* MealComponents.swift */; };
 		A646414819511092CAEC1FC5 /* Pods_EatFit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CECFB6AE15E410617FE86BE /* Pods_EatFit.framework */; };
 /* End PBXBuildFile section */
@@ -44,6 +45,7 @@
 		20B2648D20587AA200A95FCF /* food.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = food.csv; sourceTree = "<group>"; };
 		20B264942058848300A95FCF /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		3B8435A4DA7B35D782FBEA88 /* Pods-EatFit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EatFit.release.xcconfig"; path = "Pods/Target Support Files/Pods-EatFit/Pods-EatFit.release.xcconfig"; sourceTree = "<group>"; };
+		6DC2AC8820E044A000A02C9C /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		6DCE573220E03E8F00AB9E64 /* MealComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealComponents.swift; sourceTree = "<group>"; };
 		81B7835FB7B9452FC3338677 /* Pods_EatFitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EatFitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CECFB6AE15E410617FE86BE /* Pods_EatFit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EatFit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -111,6 +113,7 @@
 				20947948205878C00054EDA4 /* Main.storyboard */,
 				2094794B205878C00054EDA4 /* Assets.xcassets */,
 				2094794D205878C00054EDA4 /* LaunchScreen.storyboard */,
+				6DC2AC8820E044A000A02C9C /* Localizable.strings */,
 				20B2648D20587AA200A95FCF /* food.csv */,
 				20947950205878C00054EDA4 /* Info.plist */,
 			);
@@ -236,6 +239,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6DC2AC8920E044A000A02C9C /* Localizable.strings in Resources */,
 				2094794F205878C00054EDA4 /* LaunchScreen.storyboard in Resources */,
 				2094794C205878C00054EDA4 /* Assets.xcassets in Resources */,
 				20B2648E20587AA200A95FCF /* food.csv in Resources */,
