@@ -12,10 +12,11 @@
 		2094794A205878C00054EDA4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20947948205878C00054EDA4 /* Main.storyboard */; };
 		2094794C205878C00054EDA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2094794B205878C00054EDA4 /* Assets.xcassets */; };
 		2094794F205878C00054EDA4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2094794D205878C00054EDA4 /* LaunchScreen.storyboard */; };
-		2094795A205878C00054EDA4 /* EatFitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20947959205878C00054EDA4 /* EatFitTests.swift */; };
+		2094795A205878C00054EDA4 /* MealComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20947959205878C00054EDA4 /* MealComponents.swift */; };
 		20B2648E20587AA200A95FCF /* food.csv in Resources */ = {isa = PBXBuildFile; fileRef = 20B2648D20587AA200A95FCF /* food.csv */; };
 		20B264952058848400A95FCF /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B264942058848300A95FCF /* R.generated.swift */; };
 		6CC75618530B14EEE01A33D3 /* Pods_EatFitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81B7835FB7B9452FC3338677 /* Pods_EatFitTests.framework */; };
+		6DCE573320E03E8F00AB9E64 /* MealComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DCE573220E03E8F00AB9E64 /* MealComponents.swift */; };
 		A646414819511092CAEC1FC5 /* Pods_EatFit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CECFB6AE15E410617FE86BE /* Pods_EatFit.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,11 +39,12 @@
 		2094794E205878C00054EDA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		20947950205878C00054EDA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		20947955205878C00054EDA4 /* EatFitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EatFitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		20947959205878C00054EDA4 /* EatFitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EatFitTests.swift; sourceTree = "<group>"; };
+		20947959205878C00054EDA4 /* MealComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealComponents.swift; sourceTree = "<group>"; };
 		2094795B205878C00054EDA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		20B2648D20587AA200A95FCF /* food.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = food.csv; sourceTree = "<group>"; };
 		20B264942058848300A95FCF /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		3B8435A4DA7B35D782FBEA88 /* Pods-EatFit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EatFit.release.xcconfig"; path = "Pods/Target Support Files/Pods-EatFit/Pods-EatFit.release.xcconfig"; sourceTree = "<group>"; };
+		6DCE573220E03E8F00AB9E64 /* MealComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealComponents.swift; sourceTree = "<group>"; };
 		81B7835FB7B9452FC3338677 /* Pods_EatFitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EatFitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CECFB6AE15E410617FE86BE /* Pods_EatFit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EatFit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFB9E723D734BDDC59A19A7E /* Pods-EatFit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EatFit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EatFit/Pods-EatFit.debug.xcconfig"; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 		20947943205878C00054EDA4 /* EatFit */ = {
 			isa = PBXGroup;
 			children = (
+				6DCE573120E03E5500AB9E64 /* Model */,
 				20947944205878C00054EDA4 /* AppDelegate.swift */,
 				20947946205878C00054EDA4 /* ViewController.swift */,
 				20B264942058848300A95FCF /* R.generated.swift */,
@@ -117,10 +120,18 @@
 		20947958205878C00054EDA4 /* EatFitTests */ = {
 			isa = PBXGroup;
 			children = (
-				20947959205878C00054EDA4 /* EatFitTests.swift */,
+				20947959205878C00054EDA4 /* MealComponents.swift */,
 				2094795B205878C00054EDA4 /* Info.plist */,
 			);
 			path = EatFitTests;
+			sourceTree = "<group>";
+		};
+		6DCE573120E03E5500AB9E64 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6DCE573220E03E8F00AB9E64 /* MealComponents.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		6E88ECC8AD57E5779564D279 /* Pods */ = {
@@ -190,7 +201,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = micromanc3r;
 				TargetAttributes = {
 					20947940205878C00054EDA4 = {
@@ -418,6 +429,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6DCE573320E03E8F00AB9E64 /* MealComponents.swift in Sources */,
 				20947947205878C00054EDA4 /* ViewController.swift in Sources */,
 				20947945205878C00054EDA4 /* AppDelegate.swift in Sources */,
 				20B264952058848400A95FCF /* R.generated.swift in Sources */,
@@ -428,7 +440,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2094795A205878C00054EDA4 /* EatFitTests.swift in Sources */,
+				2094795A205878C00054EDA4 /* MealComponents.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -476,6 +488,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -483,6 +496,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -533,6 +547,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -540,6 +555,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
