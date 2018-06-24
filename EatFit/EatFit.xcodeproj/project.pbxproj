@@ -161,7 +161,6 @@
 				2094793E205878C00054EDA4 /* Frameworks */,
 				2094793F205878C00054EDA4 /* Resources */,
 				70A14FFB3489B18C534A18BE /* [CP] Embed Pods Frameworks */,
-				4DF829396DBB257F47801C41 /* [CP] Copy Pods Resources */,
 				20B264922058841100A95FCF /* ShellScript */,
 			);
 			buildRules = (
@@ -181,8 +180,6 @@
 				20947951205878C00054EDA4 /* Sources */,
 				20947952205878C00054EDA4 /* Frameworks */,
 				20947953205878C00054EDA4 /* Resources */,
-				222DE6BF01F37213BB8B4DDA /* [CP] Embed Pods Frameworks */,
-				1C94750599624941C61019C6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -274,21 +271,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		1C94750599624941C61019C6 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EatFitTests/Pods-EatFitTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		20B2648F2058835F00A95FCF /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -354,36 +336,6 @@
 			shellPath = /bin/sh;
 			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT\"";
 		};
-		222DE6BF01F37213BB8B4DDA /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EatFitTests/Pods-EatFitTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		4DF829396DBB257F47801C41 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EatFit/Pods-EatFit-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		70A14FFB3489B18C534A18BE /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -393,11 +345,13 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-EatFit/Pods-EatFit-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Cartography/Cartography.framework",
 				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
+				"${BUILT_PRODUCTS_DIR}/microLogger/MicroLogger.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cartography.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MicroLogger.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
