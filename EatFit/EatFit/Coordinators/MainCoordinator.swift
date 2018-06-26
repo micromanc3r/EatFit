@@ -15,7 +15,7 @@ class MainCoordinator: Coordinator {
     init(withWindow window: UIWindow) {
         self.window = window
 
-        navigationController.pushViewController(ViewController(),
+        navigationController.pushViewController(MealCountViewController(),
                                                 animated: false)
     }
 
