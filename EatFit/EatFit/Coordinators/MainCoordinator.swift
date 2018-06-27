@@ -34,5 +34,13 @@ extension MainCoordinator: MealCountDelegate {
                            andMessage: "Selected meal count: \(count)")
 
         UserDefaults().set(count, forKey: "meal_count")
+
+        let componentRatioVC = ComponentRatioViewController()
+        componentRatioVC.delegate = self
+        navigationController.pushViewController(componentRatioVC,
+                                                animated: true)
     }
+}
+
+extension MainCoordinator: ComponentRatioDelegate {
 }
