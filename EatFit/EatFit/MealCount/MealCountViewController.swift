@@ -15,11 +15,16 @@ class MealCountViewController: UIViewController {
     let confirmButton = UIButton()
 
     let viewModel = MealCountViewModel()
+    weak var delegate: MealCountDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         generateLayout()
+    }
+
+    @objc func confirmSelection() {
+        delegate?.mealCountSelected(count: countPicker.selectedRow(inComponent: 0) + 1)
     }
 }
 
@@ -64,6 +69,9 @@ extension MealCountViewController {
                                for: .normal)
         confirmButton.setTitleColor(.black,
                                     for: .normal)
+        confirmButton.addTarget(self,
+                                action: #selector(confirmSelection),
+                                for: .touchUpInside)
 
         view.addSubview(confirmButton)
     }

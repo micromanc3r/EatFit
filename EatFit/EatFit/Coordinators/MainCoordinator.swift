@@ -6,6 +6,7 @@
 //  Copyright © 2018 micromanc3r. All rights reserved.
 //
 
+import MicroLogger
 import UIKit
 
 class MainCoordinator: Coordinator {
@@ -15,12 +16,23 @@ class MainCoordinator: Coordinator {
     init(withWindow window: UIWindow) {
         self.window = window
 
-        navigationController.pushViewController(MealCountViewController(),
+        let mealCountVC = MealCountViewController()
+        mealCountVC.delegate = self
+        navigationController.pushViewController(mealCountVC,
                                                 animated: false)
     }
 
     func start() {
         window.rootViewController = navigationController
         window.makeKeyAndVisible()
+    }
+}
+
+extension MainCoordinator: MealCountDelegate {
+    func mealCountSelected(count: Int) {
+        MLogger.logVerbose(sender: self,
+                           andMessage: "Selected meal count: \(count)")
+
+        UserDefaults().set(count, forKey: "meal_count")
     }
 }
