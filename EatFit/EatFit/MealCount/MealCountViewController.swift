@@ -11,6 +11,7 @@ import UIKit
 
 class MealCountViewController: UIViewController {
     let countPicker = UIPickerView()
+    let viewModel = MealCountViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,29 +20,21 @@ class MealCountViewController: UIViewController {
     }
 }
 
-extension MealCountViewController: UIPickerViewDataSource, UIPickerViewDelegate {
-    func numberOfComponents(in _: UIPickerView) -> Int {
-        return 1
-    }
-
-    func pickerView(_: UIPickerView, numberOfRowsInComponent _: Int) -> Int {
-        return 6
-    }
-
-    func pickerView(_: UIPickerView, titleForRow row: Int, forComponent _: Int) -> String? {
-        return "\(row + 1)"
-    }
-
+extension MealCountViewController {
     func generateLayout() {
         view.backgroundColor = .white
 
-        countPicker.dataSource = self
-        countPicker.delegate = self
-
-        view.addSubview(countPicker)
-
+        setupCountPicker()
+        
         constrain(countPicker) { countPicker in
             countPicker.center == countPicker.superview!.center
         }
+    }
+    
+    fileprivate func setupCountPicker() {
+        countPicker.dataSource = viewModel
+        countPicker.delegate = viewModel
+        
+        view.addSubview(countPicker)
     }
 }
