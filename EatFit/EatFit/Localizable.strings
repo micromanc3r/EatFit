@@ -6,5 +6,7 @@
   Copyright © 2018 micromanc3r. All rights reserved.
 */
 
-"mc_title" = "How many meals?";
+"mc_title" = "EatFit";
+"mc_label_title" = "How many meals?";
 "mc_button" = "Confirm";
+"cr_title" = "Components";

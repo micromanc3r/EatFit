@@ -30,6 +30,7 @@ class MealCountViewController: UIViewController {
 
 extension MealCountViewController {
     func generateLayout() {
+        title = R.string.localizable.mc_title()
         view.backgroundColor = .white
 
         setupCountPicker()
@@ -58,7 +59,7 @@ extension MealCountViewController {
     }
 
     fileprivate func setupTitleLabel() {
-        titleLabel.text = R.string.localizable.mc_title()
+        titleLabel.text = R.string.localizable.mc_label_title()
         titleLabel.textAlignment = .center
 
         view.addSubview(titleLabel)

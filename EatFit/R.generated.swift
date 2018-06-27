@@ -75,21 +75,35 @@ struct R: Rswift.Validatable {
 
     /// This `R.string` struct is generated, and contains static references to 1 localization tables.
     struct string {
-        /// This `R.string.localizable` struct is generated, and contains static references to 2 localization keys.
+        /// This `R.string.localizable` struct is generated, and contains static references to 4 localization keys.
         struct localizable {
+            /// Value: Components
+            static let cr_title = Rswift.StringResource(key: "cr_title", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
             /// Value: Confirm
             static let mc_button = Rswift.StringResource(key: "mc_button", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
-            /// Value: How many meals?
+            /// Value: EatFit
             static let mc_title = Rswift.StringResource(key: "mc_title", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+            /// Value: How many meals?
+            static let mc_label_title = Rswift.StringResource(key: "mc_label_title", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+
+            /// Value: Components
+            static func cr_title(_: Void = ()) -> String {
+                return NSLocalizedString("cr_title", bundle: R.hostingBundle, comment: "")
+            }
 
             /// Value: Confirm
             static func mc_button(_: Void = ()) -> String {
                 return NSLocalizedString("mc_button", bundle: R.hostingBundle, comment: "")
             }
 
-            /// Value: How many meals?
+            /// Value: EatFit
             static func mc_title(_: Void = ()) -> String {
                 return NSLocalizedString("mc_title", bundle: R.hostingBundle, comment: "")
+            }
+
+            /// Value: How many meals?
+            static func mc_label_title(_: Void = ()) -> String {
+                return NSLocalizedString("mc_label_title", bundle: R.hostingBundle, comment: "")
             }
 
             fileprivate init() {}

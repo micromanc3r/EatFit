@@ -20,6 +20,7 @@ class ComponentRatioViewController: UIViewController {
 
 extension ComponentRatioViewController {
     func generateLayout() {
+        title = R.string.localizable.cr_title()
         view.backgroundColor = .cyan
     }
 }
