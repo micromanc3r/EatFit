@@ -25,7 +25,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func startCoordinatorFlow() {
         let window = UIWindow(frame: UIScreen.main.bounds)
-        coordinator = MainCoordinator(withWindow: window)
+        coordinator = MainCoordinator(withWindow: window,
+                                      andStorage: DefaultMealSettingsStorage())
         coordinator?.start()
     }
 

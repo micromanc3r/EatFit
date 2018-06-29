@@ -12,9 +12,11 @@ import UIKit
 class MainCoordinator: Coordinator {
     let window: UIWindow
     let navigationController = UINavigationController()
+    let settingsStorage: MealSettingsStorage
 
-    init(withWindow window: UIWindow) {
+    init(withWindow window: UIWindow, andStorage storage: MealSettingsStorage) {
         self.window = window
+        settingsStorage = storage
 
         let mealCountVC = MealCountViewController()
         mealCountVC.delegate = self
@@ -33,7 +35,7 @@ extension MainCoordinator: MealCountDelegate {
         MLogger.logVerbose(sender: self,
                            andMessage: "Selected meal count: \(count)")
 
-        UserDefaults().set(count, forKey: "meal_count")
+        settingsStorage.store(mealsPerDay: count)
 
         let componentRatioVC = ComponentRatioViewController()
         componentRatioVC.delegate = self
