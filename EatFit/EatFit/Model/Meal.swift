@@ -15,7 +15,7 @@ struct Meal {
     let vegetable: Vegetable
     let dairy: Dairy
     let fat: Fat
-    
+
     var components: [MealComponent] {
         return [cereal, protein, fruit, vegetable, dairy, fat]
     }

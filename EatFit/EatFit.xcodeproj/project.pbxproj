@@ -24,6 +24,7 @@
 		6DC3CC9320E41ACD00A2367A /* ComponentRatioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC3CC9220E41ACD00A2367A /* ComponentRatioViewController.swift */; };
 		6DC3CC9520E41B9500A2367A /* ComponentRatioDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC3CC9420E41B9500A2367A /* ComponentRatioDelegate.swift */; };
 		6DC3CC9720E4232D00A2367A /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC3CC9620E4232D00A2367A /* Meal.swift */; };
+		6DC3CC9920E50E5C00A2367A /* ComponentRatioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC3CC9820E50E5C00A2367A /* ComponentRatioView.swift */; };
 		6DCE573320E03E8F00AB9E64 /* MealComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DCE573220E03E8F00AB9E64 /* MealComponents.swift */; };
 		A646414819511092CAEC1FC5 /* Pods_EatFit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CECFB6AE15E410617FE86BE /* Pods_EatFit.framework */; };
 /* End PBXBuildFile section */
@@ -60,6 +61,7 @@
 		6DC3CC9220E41ACD00A2367A /* ComponentRatioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentRatioViewController.swift; sourceTree = "<group>"; };
 		6DC3CC9420E41B9500A2367A /* ComponentRatioDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentRatioDelegate.swift; sourceTree = "<group>"; };
 		6DC3CC9620E4232D00A2367A /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
+		6DC3CC9820E50E5C00A2367A /* ComponentRatioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentRatioView.swift; sourceTree = "<group>"; };
 		6DCE573220E03E8F00AB9E64 /* MealComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealComponents.swift; sourceTree = "<group>"; };
 		81B7835FB7B9452FC3338677 /* Pods_EatFitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EatFitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CECFB6AE15E410617FE86BE /* Pods_EatFit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EatFit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -168,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				6DC3CC9220E41ACD00A2367A /* ComponentRatioViewController.swift */,
+				6DC3CC9820E50E5C00A2367A /* ComponentRatioView.swift */,
 				6DC3CC9420E41B9500A2367A /* ComponentRatioDelegate.swift */,
 			);
 			path = ComponentRatio;
@@ -438,6 +441,7 @@
 				6DC3CC9720E4232D00A2367A /* Meal.swift in Sources */,
 				6DC3CC9020E416F500A2367A /* MealCountDelegate.swift in Sources */,
 				20947945205878C00054EDA4 /* AppDelegate.swift in Sources */,
+				6DC3CC9920E50E5C00A2367A /* ComponentRatioView.swift in Sources */,
 				6DC3CC8B20E405D300A2367A /* MealCountViewModel.swift in Sources */,
 				6D306A0620E2BA0C0086E0EA /* MainCoordinator.swift in Sources */,
 				6DC3CC9320E41ACD00A2367A /* ComponentRatioViewController.swift in Sources */,
