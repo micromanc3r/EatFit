@@ -10,4 +10,5 @@ import Foundation
 
 protocol MealCountDelegate: class {
     func mealCountSelected(count: Int)
+    func defaultMealCount() -> Int?
 }

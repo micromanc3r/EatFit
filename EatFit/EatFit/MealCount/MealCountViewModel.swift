@@ -25,4 +25,10 @@ class MealCountViewModel: NSObject, UIPickerViewDataSource, UIPickerViewDelegate
     func pickerView(_: UIPickerView, titleForRow row: Int, forComponent _: Int) -> String? {
         return "\(row + 1)"
     }
+
+    // MARK: - MealCountViewModel
+
+    func row(fromMealCount count: Int?) -> Int {
+        return (count ?? 1) - 1
+    }
 }

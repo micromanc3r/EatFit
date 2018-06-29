@@ -54,6 +54,9 @@ extension MealCountViewController {
     fileprivate func setupCountPicker() {
         countPicker.dataSource = viewModel
         countPicker.delegate = viewModel
+        countPicker.selectRow(viewModel.row(fromMealCount: delegate?.defaultMealCount()),
+                              inComponent: 0,
+                              animated: false)
 
         view.addSubview(countPicker)
     }

@@ -18,10 +18,19 @@ class MainCoordinator: Coordinator {
         self.window = window
         settingsStorage = storage
 
+        let mealCount = storage.loadMealsPerDay()
+
         let mealCountVC = MealCountViewController()
         mealCountVC.delegate = self
         navigationController.pushViewController(mealCountVC,
                                                 animated: false)
+
+        if mealCount != nil {
+            let componentRatioVC = ComponentRatioViewController()
+            componentRatioVC.delegate = self
+            navigationController.pushViewController(componentRatioVC,
+                                                    animated: false)
+        }
     }
 
     func start() {
@@ -41,6 +50,10 @@ extension MainCoordinator: MealCountDelegate {
         componentRatioVC.delegate = self
         navigationController.pushViewController(componentRatioVC,
                                                 animated: true)
+    }
+
+    func defaultMealCount() -> Int? {
+        return settingsStorage.loadMealsPerDay()
     }
 }
 
