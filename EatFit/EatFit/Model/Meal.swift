@@ -19,4 +19,13 @@ struct Meal {
     var components: [MealComponent] {
         return [cereal, protein, fruit, vegetable, dairy, fat]
     }
+
+    init() {
+        cereal = Cereal()
+        protein = Protein()
+        fruit = Fruit()
+        vegetable = Vegetable()
+        dairy = Dairy()
+        fat = Fat()
+    }
 }

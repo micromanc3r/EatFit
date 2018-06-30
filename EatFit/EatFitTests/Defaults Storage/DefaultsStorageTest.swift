@@ -1,5 +1,5 @@
 //
-//  DefaultsStorage.swift
+//  DefaultsStorageTest.swift
 //  EatFitTests
 //
 //  Created by micromanc3r on 30/06/2018.
@@ -9,7 +9,7 @@
 @testable import EatFit
 import XCTest
 
-class DefaultsStorage: XCTestCase {
+class DefaultsStorageTest: XCTestCase {
     let storage = DefaultMealSettingsStorage()
 
     private func cleanStorage() {

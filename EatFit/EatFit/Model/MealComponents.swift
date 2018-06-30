@@ -9,29 +9,29 @@
 import Foundation
 
 protocol MealComponent {
-    var quantity: Int { get }
+    var quantity: Int { get set }
 }
 
 struct Cereal: MealComponent {
-    var quantity: Int
+    var quantity: Int = 0
 }
 
 struct Fruit: MealComponent {
-    var quantity: Int
+    var quantity: Int = 0
 }
 
 struct Vegetable: MealComponent {
-    var quantity: Int
+    var quantity: Int = 0
 }
 
 struct Dairy: MealComponent {
-    var quantity: Int
+    var quantity: Int = 0
 }
 
 struct Protein: MealComponent {
-    var quantity: Int
+    var quantity: Int = 0
 }
 
 struct Fat: MealComponent {
-    var quantity: Int
+    var quantity: Int = 0
 }
