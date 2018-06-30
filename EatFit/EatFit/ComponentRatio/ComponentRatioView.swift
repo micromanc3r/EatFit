@@ -11,7 +11,8 @@ import UIKit
 
 class ComponentRatioView: UIView {
     let picker = UIPickerView()
-    
+    let pickerModel = ComponentPickerViewModel()
+
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
 
@@ -27,6 +28,21 @@ class ComponentRatioView: UIView {
 
 extension ComponentRatioView {
     func generateLayout() {
-        
+        setupPicker()
+
+        constrain(picker) { picker in
+            picker.left == picker.superview!.left
+            picker.right == picker.superview!.right
+            picker.bottom == picker.superview!.bottom
+            picker.top == picker.superview!.top
+        }
+    }
+}
+
+extension ComponentRatioView {
+    func setupPicker() {
+        picker.dataSource = pickerModel
+        picker.delegate = pickerModel
+        addSubview(picker)
     }
 }

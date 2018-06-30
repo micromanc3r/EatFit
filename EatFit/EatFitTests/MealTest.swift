@@ -55,4 +55,9 @@ class MealTest: XCTestCase {
         XCTAssertEqual(meal.fat.quantity, 4)
         XCTAssertEqual(meal.dairy.quantity, 4)
     }
+
+    func testMealComponentsCount() {
+        let meal = Meal()
+        XCTAssertEqual(Meal.componentsCount, meal.components.count)
+    }
 }

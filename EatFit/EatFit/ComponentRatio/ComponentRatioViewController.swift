@@ -6,10 +6,13 @@
 //  Copyright © 2018 micromanc3r. All rights reserved.
 //
 
+import Cartography
 import UIKit
 
 class ComponentRatioViewController: UIViewController {
     weak var delegate: ComponentRatioDelegate?
+
+    private var subviews = [UIView]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,5 +25,12 @@ extension ComponentRatioViewController {
     func generateLayout() {
         title = R.string.localizable.cr_title()
         view.backgroundColor = .cyan
+
+        let pickerView = ComponentRatioView()
+        view.addSubview(pickerView)
+
+        constrain(pickerView) { pickerView in
+            pickerView.center == pickerView.superview!.center
+        }
     }
 }

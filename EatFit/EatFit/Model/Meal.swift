@@ -9,6 +9,8 @@
 import Foundation
 
 struct Meal {
+    static let componentsCount = 6
+
     var cereal: Cereal
     var protein: Protein
     var fruit: Fruit
