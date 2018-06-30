@@ -19,7 +19,7 @@ class MealTest: XCTestCase {
     }
 
     func testMealInit() {
-        let meal = Meal()
+        let meal = Meal("")
 
         XCTAssertNotNil(meal)
         XCTAssertNotNil(meal.cereal)
@@ -39,7 +39,7 @@ class MealTest: XCTestCase {
     }
 
     func testMealEdit() {
-        var meal = Meal()
+        var meal = Meal("")
 
         meal.cereal.quantity = 4
         meal.vegetable.quantity = 4
@@ -57,7 +57,14 @@ class MealTest: XCTestCase {
     }
 
     func testMealComponentsCount() {
-        let meal = Meal()
+        let meal = Meal("")
         XCTAssertEqual(Meal.componentsCount, meal.components.count)
+    }
+
+    func testMealName() {
+        let meal = Meal("breakfast")
+
+        XCTAssertNotNil(meal)
+        XCTAssertEqual(meal.name, "breakfast")
     }
 }

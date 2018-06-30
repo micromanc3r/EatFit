@@ -11,6 +11,8 @@ import Foundation
 struct Meal {
     static let componentsCount = 6
 
+    let name: String
+
     var cereal: Cereal
     var protein: Protein
     var fruit: Fruit
@@ -22,12 +24,14 @@ struct Meal {
         return [cereal, protein, fruit, vegetable, dairy, fat]
     }
 
-    init() {
+    init(_ named: String) {
         cereal = Cereal()
         protein = Protein()
         fruit = Fruit()
         vegetable = Vegetable()
         dairy = Dairy()
         fat = Fat()
+
+        name = named
     }
 }

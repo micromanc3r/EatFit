@@ -11,8 +11,9 @@ import UIKit
 
 class ComponentRatioViewController: UIViewController {
     weak var delegate: ComponentRatioDelegate?
+    var plan: MealPlan?
 
-    private var subviews = [UIView]()
+    private let pickerView = ComponentRatioView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,11 +27,21 @@ extension ComponentRatioViewController {
         title = R.string.localizable.cr_title()
         view.backgroundColor = .cyan
 
-        let pickerView = ComponentRatioView()
-        view.addSubview(pickerView)
+        setupRatioPicker()
 
         constrain(pickerView) { pickerView in
             pickerView.center == pickerView.superview!.center
         }
+    }
+}
+
+extension ComponentRatioViewController {
+    func setupMealSelector() {
+    }
+}
+
+extension ComponentRatioViewController {
+    func setupRatioPicker() {
+        view.addSubview(pickerView)
     }
 }
