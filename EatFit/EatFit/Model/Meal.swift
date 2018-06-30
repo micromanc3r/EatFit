@@ -9,12 +9,12 @@
 import Foundation
 
 struct Meal {
-    let cereal: Cereal
-    let protein: Protein
-    let fruit: Fruit
-    let vegetable: Vegetable
-    let dairy: Dairy
-    let fat: Fat
+    var cereal: Cereal
+    var protein: Protein
+    var fruit: Fruit
+    var vegetable: Vegetable
+    var dairy: Dairy
+    var fat: Fat
 
     var components: [MealComponent] {
         return [cereal, protein, fruit, vegetable, dairy, fat]
