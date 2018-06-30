@@ -240,15 +240,15 @@
 			buildConfigurationList = 2094795E205878C00054EDA4 /* Build configuration list for PBXNativeTarget "EatFit" */;
 			buildPhases = (
 				0976DDAC99C8B2D1814D305B /* [CP] Check Pods Manifest.lock */,
-				20B264932058843900A95FCF /* ShellScript */,
-				20B2648F2058835F00A95FCF /* ShellScript */,
-				20B264902058837E00A95FCF /* ShellScript */,
-				20B26491205883F900A95FCF /* ShellScript */,
+				20B264932058843900A95FCF /* Run Script - R.Swift */,
+				20B2648F2058835F00A95FCF /* Run Script - SwiftFormat */,
+				20B264902058837E00A95FCF /* Run Script - SwiftLint */,
+				20B26491205883F900A95FCF /* Run Script - Buildnumber set */,
 				2094793D205878C00054EDA4 /* Sources */,
 				2094793E205878C00054EDA4 /* Frameworks */,
 				2094793F205878C00054EDA4 /* Resources */,
 				70A14FFB3489B18C534A18BE /* [CP] Embed Pods Frameworks */,
-				20B264922058841100A95FCF /* ShellScript */,
+				20B264922058841100A95FCF /* Run Script - Buildnumber - reset */,
 			);
 			buildRules = (
 			);
@@ -358,65 +358,72 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		20B2648F2058835F00A95FCF /* ShellScript */ = {
+		20B2648F2058835F00A95FCF /* Run Script - SwiftFormat */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
+			name = "Run Script - SwiftFormat";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/SwiftFormat/CommandLineTool/swiftformat\" --commas inline --exclude \"${SRCROOT}\"/Pods/ \"${SRCROOT}\"";
 		};
-		20B264902058837E00A95FCF /* ShellScript */ = {
+		20B264902058837E00A95FCF /* Run Script - SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
+			name = "Run Script - SwiftLint";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
 		};
-		20B26491205883F900A95FCF /* ShellScript */ = {
+		20B26491205883F900A95FCF /* Run Script - Buildnumber set */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${PROJECT_DIR}/${INFOPLIST_FILE}",
 			);
+			name = "Run Script - Buildnumber set";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# Set the build number to the count of Git commits\nbuildNumber=$(git rev-list --count HEAD)\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\"";
 		};
-		20B264922058841100A95FCF /* ShellScript */ = {
+		20B264922058841100A95FCF /* Run Script - Buildnumber - reset */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${PROJECT_DIR}/${INFOPLIST_FILE}",
 			);
+			name = "Run Script - Buildnumber - reset";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# Set the build number to \"DEVELOPMENT\"\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion DEVELOPMENT\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\"";
 		};
-		20B264932058843900A95FCF /* ShellScript */ = {
+		20B264932058843900A95FCF /* Run Script - R.Swift */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
+			name = "Run Script - R.Swift";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;

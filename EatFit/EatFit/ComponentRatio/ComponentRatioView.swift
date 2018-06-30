@@ -10,6 +10,8 @@ import Cartography
 import UIKit
 
 class ComponentRatioView: UIView {
+    let picker = UIPickerView()
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
 
@@ -25,5 +27,6 @@ class ComponentRatioView: UIView {
 
 extension ComponentRatioView {
     func generateLayout() {
+        
     }
 }
