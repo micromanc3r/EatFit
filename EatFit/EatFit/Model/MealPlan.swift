@@ -13,7 +13,7 @@ class MealPlan {
     let mealCount: Int
     let meals: [Meal]
 
-    init(mealCount: Int?) {
+    init(forMealCount mealCount: Int?) {
         self.mealCount = mealCount ?? 0
 
         if mealCount == 3 {

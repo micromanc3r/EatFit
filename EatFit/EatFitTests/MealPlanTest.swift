@@ -21,23 +21,23 @@ class MealPlanTest: XCTestCase {
     func testMealPlanInit() {
         var plan: MealPlan
 
-        plan = MealPlan(mealCount: 0)
+        plan = MealPlan(forMealCount: 0)
         XCTAssertEqual(plan.meals.count, 0)
-        plan = MealPlan(mealCount: 1)
+        plan = MealPlan(forMealCount: 1)
         XCTAssertEqual(plan.meals.count, 0)
-        plan = MealPlan(mealCount: 2)
+        plan = MealPlan(forMealCount: 2)
         XCTAssertEqual(plan.meals.count, 0)
 
-        plan = MealPlan(mealCount: 3)
+        plan = MealPlan(forMealCount: 3)
         XCTAssertEqual(plan.meals.count, 3)
         XCTAssertEqual(plan.meals.count, plan.mealCount)
-        plan = MealPlan(mealCount: 4)
+        plan = MealPlan(forMealCount: 4)
         XCTAssertEqual(plan.meals.count, 4)
         XCTAssertEqual(plan.meals.count, plan.mealCount)
-        plan = MealPlan(mealCount: 5)
+        plan = MealPlan(forMealCount: 5)
         XCTAssertEqual(plan.meals.count, 5)
         XCTAssertEqual(plan.meals.count, plan.mealCount)
-        plan = MealPlan(mealCount: 6)
+        plan = MealPlan(forMealCount: 6)
         XCTAssertEqual(plan.meals.count, 6)
         XCTAssertEqual(plan.meals.count, plan.mealCount)
     }

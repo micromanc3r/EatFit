@@ -24,7 +24,7 @@ class MealCountViewController: UIViewController {
     }
 
     @objc func confirmSelection() {
-        delegate?.mealCountSelected(count: countPicker.selectedRow(inComponent: 0) + 1)
+        delegate?.mealCountSelected(count: countPicker.selectedRow(inComponent: 0) + MealCount.minMeals)
     }
 }
 
@@ -51,7 +51,7 @@ extension MealCountViewController {
         }
     }
 
-    fileprivate func setupCountPicker() {
+    private func setupCountPicker() {
         countPicker.dataSource = viewModel
         countPicker.delegate = viewModel
         countPicker.selectRow(viewModel.row(fromMealCount: delegate?.defaultMealCount()),
@@ -61,14 +61,14 @@ extension MealCountViewController {
         view.addSubview(countPicker)
     }
 
-    fileprivate func setupTitleLabel() {
+    private func setupTitleLabel() {
         titleLabel.text = R.string.localizable.mc_label_title()
         titleLabel.textAlignment = .center
 
         view.addSubview(titleLabel)
     }
 
-    fileprivate func setupConfirmButton() {
+    private func setupConfirmButton() {
         confirmButton.setTitle(R.string.localizable.mc_button(),
                                for: .normal)
         confirmButton.setTitleColor(.black,

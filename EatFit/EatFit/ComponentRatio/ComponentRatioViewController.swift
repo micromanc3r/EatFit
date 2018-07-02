@@ -7,11 +7,13 @@
 //
 
 import Cartography
+import MicroLogger
 import UIKit
 
 class ComponentRatioViewController: UIViewController {
     weak var delegate: ComponentRatioDelegate?
     var plan: MealPlan?
+    var mealButtons = [UIButton]()
 
     private let pickerView = ComponentRatioView()
 
@@ -25,23 +27,64 @@ class ComponentRatioViewController: UIViewController {
 extension ComponentRatioViewController {
     func generateLayout() {
         title = R.string.localizable.cr_title()
-        view.backgroundColor = .cyan
+        view.backgroundColor = .white
 
         setupRatioPicker()
+        setupMealSelector()
 
-        constrain(pickerView) { pickerView in
+        if mealButtons.first == nil {
+            MLogger.logError(sender: self,
+                             andMessage: "First button missing")
+        }
+        if mealButtons.last == nil {
+            MLogger.logError(sender: self,
+                             andMessage: "Last button missing")
+        }
+
+        constrain(pickerView, mealButtons.first!, mealButtons.last!) { pickerView, firstButton, lastButton in
             pickerView.center == pickerView.superview!.center
+
+            firstButton.top == firstButton.superview!.safeAreaLayoutGuide.top + 16
+            firstButton.left == firstButton.superview!.safeAreaLayoutGuide.left + 16
+
+            lastButton.right <= lastButton.superview!.right - 16
         }
     }
-}
 
-extension ComponentRatioViewController {
-    func setupMealSelector() {
+    private func setupMealSelector() {
+        if plan == nil {
+            MLogger.logError(sender: self,
+                             andMessage: "Meal plan is nil!")
+        }
+
+        var previousButton: UIButton?
+
+        for meal in plan!.meals {
+            let mealButton = UIButton(frame: .zero)
+            mealButton.setTitleColor(.black,
+                                     for: .normal)
+            mealButton.setTitle("\(meal.name.first ?? "-")",
+                                for: .normal)
+
+            mealButtons.append(mealButton)
+            view.addSubview(mealButton)
+            constrain(mealButton) { mealButton in
+                mealButton.height == 32
+                mealButton.width == 32
+            }
+
+            if let previousButton = previousButton {
+                constrain(mealButton, previousButton) { mealButton, previousButton in
+                    mealButton.left == previousButton.right + 8
+                    mealButton.top == previousButton.top
+                }
+            }
+
+            previousButton = mealButton
+        }
     }
-}
 
-extension ComponentRatioViewController {
-    func setupRatioPicker() {
+    private func setupRatioPicker() {
         view.addSubview(pickerView)
     }
 }

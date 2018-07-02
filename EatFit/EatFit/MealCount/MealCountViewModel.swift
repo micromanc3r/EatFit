@@ -17,18 +17,18 @@ class MealCountViewModel: NSObject, UIPickerViewDataSource, UIPickerViewDelegate
     }
 
     func pickerView(_: UIPickerView, numberOfRowsInComponent _: Int) -> Int {
-        return MealCount.maxMeals
+        return MealCount.maxMeals - MealCount.minMeals + 1 // 6 - 3 (+1) = (3,)4,5,6
     }
 
     // MARK: - UIPickerViewDelegate
 
     func pickerView(_: UIPickerView, titleForRow row: Int, forComponent _: Int) -> String? {
-        return "\(row + 1)"
+        return "\(row + MealCount.minMeals)"
     }
 
     // MARK: - MealCountViewModel
 
     func row(fromMealCount count: Int?) -> Int {
-        return (count ?? 1) - 1
+        return (count ?? MealCount.minMeals) - MealCount.minMeals
     }
 }

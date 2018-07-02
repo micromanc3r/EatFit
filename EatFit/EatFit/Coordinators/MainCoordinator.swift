@@ -38,7 +38,7 @@ class MainCoordinator: Coordinator {
     func pushComponentRatioVC() {
         let componentRatioVC = ComponentRatioViewController()
         componentRatioVC.delegate = self
-        componentRatioVC.plan = MealPlan(mealCount: settingsStorage.loadMealsPerDay())
+        componentRatioVC.plan = MealPlan(forMealCount: settingsStorage.loadMealsPerDay())
         navigationController.pushViewController(componentRatioVC,
                                                 animated: false)
     }
