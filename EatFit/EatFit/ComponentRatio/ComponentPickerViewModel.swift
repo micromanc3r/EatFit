@@ -6,9 +6,13 @@
 //  Copyright © 2018 micromanc3r. All rights reserved.
 //
 
+import MicroLogger
 import UIKit
 
 class ComponentPickerViewModel: NSObject, UIPickerViewDelegate, UIPickerViewDataSource {
+
+    // MARK: - UIPickerViewDataSource
+
     func numberOfComponents(in _: UIPickerView) -> Int {
         return Meal.componentsCount
     }
@@ -16,6 +20,8 @@ class ComponentPickerViewModel: NSObject, UIPickerViewDelegate, UIPickerViewData
     func pickerView(_: UIPickerView, numberOfRowsInComponent _: Int) -> Int {
         return 11
     }
+
+    // MARK: - UIPickerViewDelegate
 
     func pickerView(_: UIPickerView, titleForRow row: Int, forComponent _: Int) -> String? {
         return "\(Double(row) * 0.5)"

@@ -14,6 +14,7 @@ class ComponentRatioViewController: UIViewController {
     weak var delegate: ComponentRatioDelegate?
     var plan: MealPlan?
     var mealButtons = [UIButton]()
+    let viewModel = ComponentRatioViewModel()
 
     private let pickerView = ComponentRatioView()
 
@@ -21,6 +22,10 @@ class ComponentRatioViewController: UIViewController {
         super.viewDidLoad()
 
         generateLayout()
+    }
+
+    @objc func didSelect(meal: UIButton) {
+        viewModel.selectedMeal = mealButtons.index(of: meal)!
     }
 }
 
@@ -61,6 +66,9 @@ extension ComponentRatioViewController {
 
         for meal in plan!.meals {
             let mealButton = UIButton(frame: .zero)
+            mealButton.addTarget(self,
+                                 action: #selector(didSelect(meal:)),
+                                 for: .touchUpInside)
             mealButton.setTitleColor(.black,
                                      for: .normal)
             mealButton.setTitle("\(meal.name.first ?? "-")",
