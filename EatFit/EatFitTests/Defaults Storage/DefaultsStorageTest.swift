@@ -14,6 +14,7 @@ class DefaultsStorageTest: XCTestCase {
 
     private func cleanStorage() {
         UserDefaults.standard.removeObject(forKey: Key.mealsPerDay)
+        UserDefaults.standard.removeObject(forKey: Key.mealPlan)
     }
 
     override func setUp() {
