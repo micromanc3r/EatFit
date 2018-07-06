@@ -26,7 +26,7 @@ class DefaultsStorageTest: XCTestCase {
         cleanStorage()
     }
 
-    func testMealCountNilBeforeSetup() {
+    func testMealCountNilBeforeStore() {
         XCTAssertNil(storage.loadMealsPerDay())
     }
 
@@ -37,5 +37,19 @@ class DefaultsStorageTest: XCTestCase {
         XCTAssertNotNil(storage.loadMealsPerDay())
         XCTAssertEqual(mealCount,
                        storage.loadMealsPerDay()!)
+    }
+
+    func testMealPlanNilBeforeStore() {
+        XCTAssertNil(storage.loadMealPlan())
+    }
+
+    func testMealPlan() {
+        let plan = MealPlan(forMealCount: 5)
+        storage.store(mealPlan: plan)
+
+        let loadedPlan = storage.loadMealPlan()
+        XCTAssertNotNil(loadedPlan)
+        XCTAssertEqual(5,
+                       loadedPlan?.mealCount)
     }
 }

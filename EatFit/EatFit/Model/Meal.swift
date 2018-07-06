@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Meal {
+struct Meal: Codable {
     static let componentsCount = 6
 
     let name: String

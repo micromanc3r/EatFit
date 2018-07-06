@@ -9,7 +9,7 @@
 import Foundation
 import MicroLogger
 
-class MealPlan {
+class MealPlan: Codable {
     let mealCount: Int
     let meals: [Meal]
 

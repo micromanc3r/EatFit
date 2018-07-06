@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol MealComponent {
+protocol MealComponent: Codable {
     var quantity: Int { get set }
 }
 

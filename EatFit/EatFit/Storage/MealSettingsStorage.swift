@@ -12,4 +12,7 @@ protocol MealSettingsStorage {
     func store(mealsPerDay: Int)
     // returns nil if not yet stored, number of meals otherwise
     func loadMealsPerDay() -> Int?
+
+    func store(mealPlan: MealPlan)
+    func loadMealPlan() -> MealPlan?
 }
