@@ -37,9 +37,7 @@ extension ComponentRatioPickerView {
             picker.top == picker.superview!.top
         }
     }
-}
 
-extension ComponentRatioPickerView {
     func setupPicker() {
         picker.dataSource = pickerModel
         picker.delegate = pickerModel
