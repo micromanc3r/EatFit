@@ -16,7 +16,7 @@ class ComponentRatioViewController: UIViewController {
     var mealButtons = [UIButton]()
     let viewModel = ComponentRatioViewModel()
 
-    private let pickerView = ComponentRatioView()
+    private let pickerView = ComponentRatioPickerView()
 
     override func viewDidLoad() {
         super.viewDidLoad()

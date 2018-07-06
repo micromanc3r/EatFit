@@ -9,9 +9,9 @@
 import Cartography
 import UIKit
 
-class ComponentRatioView: UIView {
+class ComponentRatioPickerView: UIView {
     let picker = UIPickerView()
-    let pickerModel = ComponentPickerViewModel()
+    let pickerModel = ComponentRatioPickerViewModel()
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -26,7 +26,7 @@ class ComponentRatioView: UIView {
     }
 }
 
-extension ComponentRatioView {
+extension ComponentRatioPickerView {
     func generateLayout() {
         setupPicker()
 
@@ -39,7 +39,7 @@ extension ComponentRatioView {
     }
 }
 
-extension ComponentRatioView {
+extension ComponentRatioPickerView {
     func setupPicker() {
         picker.dataSource = pickerModel
         picker.delegate = pickerModel

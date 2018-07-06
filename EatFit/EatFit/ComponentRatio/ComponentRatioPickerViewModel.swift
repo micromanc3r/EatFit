@@ -9,7 +9,7 @@
 import MicroLogger
 import UIKit
 
-class ComponentPickerViewModel: NSObject, UIPickerViewDelegate, UIPickerViewDataSource {
+class ComponentRatioPickerViewModel: NSObject, UIPickerViewDelegate, UIPickerViewDataSource {
 
     // MARK: - UIPickerViewDataSource
 
