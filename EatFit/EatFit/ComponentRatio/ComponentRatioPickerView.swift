@@ -9,9 +9,17 @@
 import Cartography
 import UIKit
 
+// MARK: - Lifecycle
+
 class ComponentRatioPickerView: UIView {
     let picker = UIPickerView()
     let pickerModel = ComponentRatioPickerViewModel()
+
+    weak var delegate: ComponentRatioPickerViewDelegate? {
+        didSet {
+            pickerModel.delegate = delegate
+        }
+    }
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -26,8 +34,10 @@ class ComponentRatioPickerView: UIView {
     }
 }
 
+// MARK: - UI Setup
+
 extension ComponentRatioPickerView {
-    func generateLayout() {
+    private func generateLayout() {
         setupPicker()
 
         constrain(picker) { picker in
@@ -38,9 +48,29 @@ extension ComponentRatioPickerView {
         }
     }
 
-    func setupPicker() {
+    private func setupPicker() {
         picker.dataSource = pickerModel
         picker.delegate = pickerModel
         addSubview(picker)
     }
+}
+
+// MARK: - API
+
+extension ComponentRatioPickerView {
+    func updatePicker(withMealPlan plan: MealPlan, forPosition position: Int) {
+        let meal = plan.meals[position]
+
+        for index in 0 ..< meal.components.count {
+            picker.selectRow(meal.components[index].quantity,
+                             inComponent: index,
+                             animated: true)
+        }
+    }
+}
+
+// MARK: - ComponentRatioPickerViewDelegate
+
+protocol ComponentRatioPickerViewDelegate: class {
+    func updated(_ mealPlan: MealPlan)
 }

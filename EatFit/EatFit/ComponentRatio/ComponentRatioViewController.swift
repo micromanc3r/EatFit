@@ -22,6 +22,7 @@ class ComponentRatioViewController: UIViewController {
         super.viewDidLoad()
 
         generateLayout()
+        viewModel.delegate = self
     }
 
     @objc func didSelect(meal: UIButton) {
@@ -94,5 +95,19 @@ extension ComponentRatioViewController {
 
     private func setupRatioPicker() {
         view.addSubview(pickerView)
+        selected(mealIndex: 1)
+    }
+}
+
+extension ComponentRatioViewController: ComponentRatioViewModelDelegate {
+    func selected(mealIndex: Int) {
+        guard let plan = plan else {
+            MLogger.logWarning(sender: self,
+                               andMessage: "Meal plan missing!")
+            return
+        }
+
+        pickerView.updatePicker(withMealPlan: plan,
+                                forPosition: mealIndex)
     }
 }

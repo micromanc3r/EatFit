@@ -10,6 +10,7 @@ import MicroLogger
 import UIKit
 
 class ComponentRatioPickerViewModel: NSObject, UIPickerViewDelegate, UIPickerViewDataSource {
+    weak var delegate: ComponentRatioPickerViewDelegate?
 
     // MARK: - UIPickerViewDataSource
 

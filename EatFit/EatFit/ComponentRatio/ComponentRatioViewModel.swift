@@ -10,10 +10,18 @@ import Foundation
 import MicroLogger
 
 class ComponentRatioViewModel {
+    weak var delegate: ComponentRatioViewModelDelegate?
+
     var selectedMeal = 0 {
         didSet {
             MLogger.logVerbose(sender: self,
                                andMessage: "\(selectedMeal)") // cannot be nil
+
+            delegate?.selected(mealIndex: selectedMeal)
         }
     }
+}
+
+protocol ComponentRatioViewModelDelegate: class {
+    func selected(mealIndex: Int)
 }
