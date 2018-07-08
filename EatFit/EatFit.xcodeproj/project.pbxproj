@@ -17,6 +17,7 @@
 		6CC75618530B14EEE01A33D3 /* Pods_EatFitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81B7835FB7B9452FC3338677 /* Pods_EatFitTests.framework */; };
 		6D26971820EADAD300D2A160 /* ComponentRatioViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D26971720EADAD300D2A160 /* ComponentRatioViewModel.swift */; };
 		6D26971A20F16F1B00D2A160 /* MealType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D26971920F16F1B00D2A160 /* MealType.swift */; };
+		6D26971C20F2202900D2A160 /* ComponentRatioPickerViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D26971B20F2202900D2A160 /* ComponentRatioPickerViewTest.swift */; };
 		6D306A0620E2BA0C0086E0EA /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D306A0520E2BA0C0086E0EA /* MainCoordinator.swift */; };
 		6D306A0820E2BDD90086E0EA /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D306A0720E2BDD90086E0EA /* Coordinator.swift */; };
 		6DC2AC8920E044A000A02C9C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6DC2AC8820E044A000A02C9C /* Localizable.strings */; };
@@ -63,6 +64,7 @@
 		3B8435A4DA7B35D782FBEA88 /* Pods-EatFit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EatFit.release.xcconfig"; path = "Pods/Target Support Files/Pods-EatFit/Pods-EatFit.release.xcconfig"; sourceTree = "<group>"; };
 		6D26971720EADAD300D2A160 /* ComponentRatioViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentRatioViewModel.swift; sourceTree = "<group>"; };
 		6D26971920F16F1B00D2A160 /* MealType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealType.swift; sourceTree = "<group>"; };
+		6D26971B20F2202900D2A160 /* ComponentRatioPickerViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentRatioPickerViewTest.swift; sourceTree = "<group>"; };
 		6D306A0520E2BA0C0086E0EA /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		6D306A0720E2BDD90086E0EA /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		6DC2AC8820E044A000A02C9C /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 				20947959205878C00054EDA4 /* MealComponentsTest.swift */,
 				6DC3CCA320E7895300A2367A /* MealTest.swift */,
 				6DC3CCA920E8481F00A2367A /* MealPlanTest.swift */,
+				6D26971B20F2202900D2A160 /* ComponentRatioPickerViewTest.swift */,
 				2094795B205878C00054EDA4 /* Info.plist */,
 			);
 			path = EatFitTests;
@@ -521,6 +524,7 @@
 				6DC3CCA420E7895300A2367A /* MealTest.swift in Sources */,
 				2094795A205878C00054EDA4 /* MealComponentsTest.swift in Sources */,
 				6DC3CCA220E6EBD500A2367A /* DefaultsStorageTest.swift in Sources */,
+				6D26971C20F2202900D2A160 /* ComponentRatioPickerViewTest.swift in Sources */,
 				6DC3CCAA20E8481F00A2367A /* MealPlanTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
