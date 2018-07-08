@@ -60,6 +60,7 @@ extension ComponentRatioPickerView {
 extension ComponentRatioPickerView {
     func updatePicker(withMealPlan plan: MealPlan, forPosition position: Int) {
         let meal = plan.meals[position]
+        pickerModel.currentMeal = meal
 
         for index in 0 ..< meal.components.count {
             picker.selectRow(meal.components[index].quantity,
@@ -72,5 +73,5 @@ extension ComponentRatioPickerView {
 // MARK: - ComponentRatioPickerViewDelegate
 
 protocol ComponentRatioPickerViewDelegate: class {
-    func updated(_ mealPlan: MealPlan)
+    func updated(meal: Meal)
 }

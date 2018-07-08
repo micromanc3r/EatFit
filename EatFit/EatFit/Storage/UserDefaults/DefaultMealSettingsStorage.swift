@@ -58,6 +58,17 @@ class DefaultMealSettingsStorage: MealSettingsStorage {
                            andMessage: "No meal plan found.")
         return nil
     }
+
+    func loadOrCreateMealPlan() -> MealPlan {
+        let mealCount = loadMealsPerDay()
+        if let oldPlan = loadMealPlan(), oldPlan.mealCount == mealCount {
+            return oldPlan
+        }
+
+        let newPlan = MealPlan(forMealCount: mealCount)
+        store(mealPlan: newPlan)
+        return newPlan
+    }
 }
 
 struct Key {

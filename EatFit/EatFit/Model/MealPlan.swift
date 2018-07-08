@@ -11,45 +11,53 @@ import MicroLogger
 
 class MealPlan: Codable {
     let mealCount: Int
-    let meals: [Meal]
+    var meals: [Meal]
 
     init(forMealCount mealCount: Int?) {
         self.mealCount = mealCount ?? 0
 
         if mealCount == 3 {
             meals = [
-                Meal("Breakfast"),
-                Meal("Lunch"),
-                Meal("Dinner1")
+                Meal(.breakfast),
+                Meal(.lunch),
+                Meal(.dinner1)
             ]
         } else if mealCount == 4 {
             meals = [
-                Meal("Breakfast"),
-                Meal("Snack1"),
-                Meal("Lunch"),
-                Meal("Dinner1")
+                Meal(.breakfast),
+                Meal(.snack1),
+                Meal(.lunch),
+                Meal(.dinner1)
             ]
         } else if mealCount == 5 {
             meals = [
-                Meal("Breakfast"),
-                Meal("Snack1"),
-                Meal("Lunch"),
-                Meal("Snack2"),
-                Meal("Dinner1")
+                Meal(.breakfast),
+                Meal(.snack1),
+                Meal(.lunch),
+                Meal(.snack2),
+                Meal(.dinner1)
             ]
         } else if mealCount == 6 {
             meals = [
-                Meal("Breakfast"),
-                Meal("Snack1"),
-                Meal("Lunch"),
-                Meal("Snack2"),
-                Meal("Dinner1"),
-                Meal("Dinner2")
+                Meal(.breakfast),
+                Meal(.snack1),
+                Meal(.lunch),
+                Meal(.snack2),
+                Meal(.dinner1),
+                Meal(.dinner2)
             ]
         } else {
             MLogger.logError(sender: MealPlan.self,
                              andMessage: "Invalid meal count.")
             meals = [Meal]()
+        }
+    }
+}
+
+extension MealPlan {
+    func update(_ updatedMeal: Meal) {
+        for index in 0 ..< meals.count where meals[index].type == updatedMeal.type {
+            meals[index] = updatedMeal
         }
     }
 }

@@ -8,5 +8,5 @@
 
 import Foundation
 
-protocol ComponentRatioDelegate: class {
+protocol ComponentRatioDelegate: ComponentRatioPickerViewDelegate {
 }

@@ -11,6 +11,7 @@ import UIKit
 
 class ComponentRatioPickerViewModel: NSObject, UIPickerViewDelegate, UIPickerViewDataSource {
     weak var delegate: ComponentRatioPickerViewDelegate?
+    var currentMeal: Meal?
 
     // MARK: - UIPickerViewDataSource
 
@@ -26,5 +27,16 @@ class ComponentRatioPickerViewModel: NSObject, UIPickerViewDelegate, UIPickerVie
 
     func pickerView(_: UIPickerView, titleForRow row: Int, forComponent _: Int) -> String? {
         return "\(Double(row) * 0.5)"
+    }
+
+    func pickerView(_: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        guard var currentMeal = currentMeal else {
+            MLogger.logWarning(sender: self,
+                               andMessage: "No current meal set - cannot update.")
+            return
+        }
+
+        currentMeal.components[component].quantity = row
+        delegate?.updated(meal: currentMeal)
     }
 }

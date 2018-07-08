@@ -11,7 +11,7 @@ import Foundation
 struct Meal: Codable {
     static let componentsCount = 6
 
-    let name: String
+    let type: MealType
 
     var cereal: Cereal
     var protein: Protein
@@ -21,10 +21,18 @@ struct Meal: Codable {
     var fat: Fat
 
     var components: [MealComponent] {
-        return [cereal, protein, fruit, vegetable, dairy, fat]
+        get { return [cereal, protein, fruit, vegetable, dairy, fat] }
+        set {
+            cereal.quantity = newValue[0].quantity
+            protein.quantity = newValue[1].quantity
+            fruit.quantity = newValue[2].quantity
+            vegetable.quantity = newValue[3].quantity
+            dairy.quantity = newValue[4].quantity
+            fat.quantity = newValue[5].quantity
+        }
     }
 
-    init(_ named: String) {
+    init(_ type: MealType) {
         cereal = Cereal()
         protein = Protein()
         fruit = Fruit()
@@ -32,6 +40,6 @@ struct Meal: Codable {
         dairy = Dairy()
         fat = Fat()
 
-        name = named
+        self.type = type
     }
 }

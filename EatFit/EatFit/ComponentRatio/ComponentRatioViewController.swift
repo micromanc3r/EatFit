@@ -72,7 +72,7 @@ extension ComponentRatioViewController {
                                  for: .touchUpInside)
             mealButton.setTitleColor(.black,
                                      for: .normal)
-            mealButton.setTitle("\(meal.name.first ?? "-")",
+            mealButton.setTitle("\(meal.type.rawValue.first ?? "-")",
                                 for: .normal)
 
             mealButtons.append(mealButton)
@@ -94,8 +94,9 @@ extension ComponentRatioViewController {
     }
 
     private func setupRatioPicker() {
+        pickerView.delegate = delegate
         view.addSubview(pickerView)
-        selected(mealIndex: 1)
+        selected(mealIndex: 0)
     }
 }
 

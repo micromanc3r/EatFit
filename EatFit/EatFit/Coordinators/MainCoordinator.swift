@@ -38,7 +38,7 @@ class MainCoordinator: Coordinator {
     func pushComponentRatioVC() {
         let componentRatioVC = ComponentRatioViewController()
         componentRatioVC.delegate = self
-        componentRatioVC.plan = MealPlan(forMealCount: settingsStorage.loadMealsPerDay())
+        componentRatioVC.plan = settingsStorage.loadOrCreateMealPlan()
         navigationController.pushViewController(componentRatioVC,
                                                 animated: false)
     }
@@ -60,4 +60,18 @@ extension MainCoordinator: MealCountDelegate {
 }
 
 extension MainCoordinator: ComponentRatioDelegate {
+    func updated(meal: Meal) {
+        guard let plan = settingsStorage.loadMealPlan() else {
+            MLogger.logWarning(sender: self,
+                               andMessage: "No meal plan found.")
+            return
+        }
+
+        plan.update(meal)
+        settingsStorage.store(mealPlan: plan)
+
+        if let crVC = navigationController.topViewController as? ComponentRatioViewController {
+            crVC.plan = plan
+        }
+    }
 }
