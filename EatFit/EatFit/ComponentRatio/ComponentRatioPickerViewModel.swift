@@ -30,13 +30,13 @@ class ComponentRatioPickerViewModel: NSObject, UIPickerViewDelegate, UIPickerVie
     }
 
     func pickerView(_: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        guard var currentMeal = currentMeal else {
+        guard currentMeal != nil else {
             MLogger.logWarning(sender: self,
                                andMessage: "No current meal set - cannot update.")
             return
         }
 
-        currentMeal.components[component].quantity = row
-        delegate?.updated(meal: currentMeal)
+        currentMeal!.components[component].quantity = row
+        delegate?.updated(meal: currentMeal!)
     }
 }
