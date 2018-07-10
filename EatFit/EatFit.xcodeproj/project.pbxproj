@@ -19,6 +19,9 @@
 		6D26971A20F16F1B00D2A160 /* MealType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D26971920F16F1B00D2A160 /* MealType.swift */; };
 		6D26971C20F2202900D2A160 /* ComponentRatioPickerViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D26971B20F2202900D2A160 /* ComponentRatioPickerViewTest.swift */; };
 		6D26971F20F5332900D2A160 /* SetupOkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D26971E20F5332900D2A160 /* SetupOkViewController.swift */; };
+		6D26972220F537ED00D2A160 /* SelectMealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D26972120F537ED00D2A160 /* SelectMealViewController.swift */; };
+		6D26972420F5389200D2A160 /* SetupOkDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D26972320F5389200D2A160 /* SetupOkDelegate.swift */; };
+		6D26972620F53B9E00D2A160 /* UIView+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D26972520F53B9E00D2A160 /* UIView+Animations.swift */; };
 		6D306A0620E2BA0C0086E0EA /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D306A0520E2BA0C0086E0EA /* MainCoordinator.swift */; };
 		6D306A0820E2BDD90086E0EA /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D306A0720E2BDD90086E0EA /* Coordinator.swift */; };
 		6DC2AC8920E044A000A02C9C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6DC2AC8820E044A000A02C9C /* Localizable.strings */; };
@@ -67,6 +70,9 @@
 		6D26971920F16F1B00D2A160 /* MealType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealType.swift; sourceTree = "<group>"; };
 		6D26971B20F2202900D2A160 /* ComponentRatioPickerViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentRatioPickerViewTest.swift; sourceTree = "<group>"; };
 		6D26971E20F5332900D2A160 /* SetupOkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupOkViewController.swift; sourceTree = "<group>"; };
+		6D26972120F537ED00D2A160 /* SelectMealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectMealViewController.swift; sourceTree = "<group>"; };
+		6D26972320F5389200D2A160 /* SetupOkDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupOkDelegate.swift; sourceTree = "<group>"; };
+		6D26972520F53B9E00D2A160 /* UIView+Animations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Animations.swift"; sourceTree = "<group>"; };
 		6D306A0520E2BA0C0086E0EA /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		6D306A0720E2BDD90086E0EA /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		6DC2AC8820E044A000A02C9C /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
@@ -145,8 +151,10 @@
 			isa = PBXGroup;
 			children = (
 				20947944205878C00054EDA4 /* AppDelegate.swift */,
+				6D26972520F53B9E00D2A160 /* UIView+Animations.swift */,
 				6D306A0420E2B95B0086E0EA /* Coordinators */,
 				6D26971D20F5328E00D2A160 /* Mealplan - setup */,
+				6D26972020F537B600D2A160 /* Meal creation */,
 				6DCE573120E03E5500AB9E64 /* Model */,
 				6DC3CC9A20E6E40700A2367A /* Storage */,
 				20B264942058848300A95FCF /* R.generated.swift */,
@@ -178,8 +186,17 @@
 				6DC3CC8E20E405FB00A2367A /* MealCount */,
 				6DC3CC9120E41AA500A2367A /* ComponentRatio */,
 				6D26971E20F5332900D2A160 /* SetupOkViewController.swift */,
+				6D26972320F5389200D2A160 /* SetupOkDelegate.swift */,
 			);
 			path = "Mealplan - setup";
+			sourceTree = "<group>";
+		};
+		6D26972020F537B600D2A160 /* Meal creation */ = {
+			isa = PBXGroup;
+			children = (
+				6D26972120F537ED00D2A160 /* SelectMealViewController.swift */,
+			);
+			path = "Meal creation";
 			sourceTree = "<group>";
 		};
 		6D306A0420E2B95B0086E0EA /* Coordinators */ = {
@@ -399,7 +416,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/SwiftFormat/CommandLineTool/swiftformat\" --commas inline --exclude \"${SRCROOT}\"/Pods/ \"${SRCROOT}\"";
+			shellScript = "#\"${PODS_ROOT}/SwiftFormat/CommandLineTool/swiftformat\" --commas inline --exclude \"${SRCROOT}\"/Pods/ \"${SRCROOT}\"";
 		};
 		20B264902058837E00A95FCF /* Run Script - SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -508,6 +525,7 @@
 			files = (
 				6DCE573320E03E8F00AB9E64 /* MealComponents.swift in Sources */,
 				20947947205878C00054EDA4 /* MealCountViewController.swift in Sources */,
+				6D26972220F537ED00D2A160 /* SelectMealViewController.swift in Sources */,
 				6DC3CC8D20E405F600A2367A /* MealCount.swift in Sources */,
 				6DC3CC9C20E6E5BC00A2367A /* MealSettingsStorage.swift in Sources */,
 				6D26971820EADAD300D2A160 /* ComponentRatioViewModel.swift in Sources */,
@@ -521,11 +539,13 @@
 				6DC3CC9920E50E5C00A2367A /* ComponentRatioPickerView.swift in Sources */,
 				6DC3CCA820E8444600A2367A /* MealPlan.swift in Sources */,
 				6D26971A20F16F1B00D2A160 /* MealType.swift in Sources */,
+				6D26972420F5389200D2A160 /* SetupOkDelegate.swift in Sources */,
 				6DC3CC8B20E405D300A2367A /* MealCountViewModel.swift in Sources */,
 				6D306A0620E2BA0C0086E0EA /* MainCoordinator.swift in Sources */,
 				6DC3CC9320E41ACD00A2367A /* ComponentRatioViewController.swift in Sources */,
 				6DC3CC9520E41B9500A2367A /* ComponentRatioDelegate.swift in Sources */,
 				20B264952058848400A95FCF /* R.generated.swift in Sources */,
+				6D26972620F53B9E00D2A160 /* UIView+Animations.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

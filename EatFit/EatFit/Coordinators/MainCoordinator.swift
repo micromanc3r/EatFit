@@ -79,8 +79,22 @@ extension MainCoordinator: ComponentRatioDelegate {
         MLogger.logVerbose(sender: self,
                            andMessage: "Components setup finished.")
         let setupOkVC = SetupOkViewController()
+        setupOkVC.delegate = self
         navigationController.pushViewController(setupOkVC,
                                                 animated: true)
         navigationController.setNavigationBarHidden(true, animated: true)
+    }
+}
+
+extension MainCoordinator: SetupOkDelegate {
+    func canContinue() {
+        let newVc = SelectMealViewController()
+        UIView.transition(with: window,
+                          duration: 0.3,
+                          options: .transitionCrossDissolve,
+                          animations: {
+                            self.window.rootViewController = newVc
+        },
+                          completion: nil)
     }
 }
