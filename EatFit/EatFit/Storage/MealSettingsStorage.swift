@@ -16,4 +16,7 @@ protocol MealSettingsStorage {
     func store(mealPlan: MealPlan)
     func loadMealPlan() -> MealPlan?
     func loadOrCreateMealPlan() -> MealPlan
+    
+    func store(mealPlanSetupFinished: Bool)
+    func mealPlanSetupFinished() -> Bool
 }

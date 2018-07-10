@@ -15,6 +15,7 @@ class DefaultsStorageTest: XCTestCase {
     private func cleanStorage() {
         UserDefaults.standard.removeObject(forKey: Key.mealsPerDay)
         UserDefaults.standard.removeObject(forKey: Key.mealPlan)
+        UserDefaults.standard.removeObject(forKey: Key.setupFinished)
     }
 
     override func setUp() {
@@ -52,5 +53,17 @@ class DefaultsStorageTest: XCTestCase {
         XCTAssertNotNil(loadedPlan)
         XCTAssertEqual(5,
                        loadedPlan?.mealCount)
+    }
+    
+    func testSetupFinishedBeforeStore() {
+        XCTAssertFalse(storage.mealPlanSetupFinished())
+    }
+    
+    func testSetupFinished() {
+        storage.store(mealPlanSetupFinished: false)
+        XCTAssertFalse(storage.mealPlanSetupFinished())
+        
+        storage.store(mealPlanSetupFinished: true)
+        XCTAssertTrue(storage.mealPlanSetupFinished())
     }
 }
