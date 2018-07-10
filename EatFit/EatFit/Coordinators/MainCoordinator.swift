@@ -13,28 +13,39 @@ class MainCoordinator: Coordinator {
     let window: UIWindow
     let navigationController = UINavigationController()
     let settingsStorage: MealSettingsStorage
-
+    
     init(withWindow window: UIWindow, andStorage storage: MealSettingsStorage) {
         self.window = window
         settingsStorage = storage
-
-        let mealCount = storage.loadMealsPerDay()
-
+    }
+    
+    func start() {
+        if settingsStorage.mealPlanSetupFinished() {
+            startMainFlow()
+        } else {
+            startSetupFlow()
+        }
+        window.makeKeyAndVisible()
+    }
+    
+    func startSetupFlow() {
+        let mealCount = settingsStorage.loadMealsPerDay()
         let mealCountVC = MealCountViewController()
         mealCountVC.delegate = self
         navigationController.pushViewController(mealCountVC,
                                                 animated: false)
-
+        
         if mealCount != nil {
             pushComponentRatioVC()
         }
-    }
-
-    func start() {
+        
         window.rootViewController = navigationController
-        window.makeKeyAndVisible()
     }
-
+    
+    func startMainFlow() {
+        window.rootViewController = SelectMealViewController()
+    }
+    
     func pushComponentRatioVC() {
         let componentRatioVC = ComponentRatioViewController()
         componentRatioVC.delegate = self
@@ -48,12 +59,12 @@ extension MainCoordinator: MealCountDelegate {
     func mealCountSelected(count: Int) {
         MLogger.logVerbose(sender: self,
                            andMessage: "Selected meal count: \(count)")
-
+        
         settingsStorage.store(mealsPerDay: count)
-
+        
         pushComponentRatioVC()
     }
-
+    
     func defaultMealCount() -> Int? {
         return settingsStorage.loadMealsPerDay()
     }
@@ -66,10 +77,10 @@ extension MainCoordinator: ComponentRatioDelegate {
                                andMessage: "No meal plan found.")
             return
         }
-
+        
         plan.update(meal)
         settingsStorage.store(mealPlan: plan)
-
+        
         if let crVC = navigationController.topViewController as? ComponentRatioViewController {
             crVC.plan = plan
         }
@@ -88,6 +99,8 @@ extension MainCoordinator: ComponentRatioDelegate {
 
 extension MainCoordinator: SetupOkDelegate {
     func canContinue() {
+        settingsStorage.store(mealPlanSetupFinished: true)
+        
         let newVc = SelectMealViewController()
         UIView.transition(with: window,
                           duration: 0.3,
