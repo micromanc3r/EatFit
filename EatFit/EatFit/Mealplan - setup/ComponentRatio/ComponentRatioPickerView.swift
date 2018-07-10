@@ -24,20 +24,20 @@ class ComponentRatioPickerView: UIView {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
 
-        generateLayout()
+        prepareLayout()
     }
 
     override init(frame: CGRect) {
         super.init(frame: frame)
 
-        generateLayout()
+        prepareLayout()
     }
 }
 
 // MARK: - UI Setup
 
 extension ComponentRatioPickerView {
-    private func generateLayout() {
+    func prepareLayout() {
         setupPicker()
 
         constrain(picker) { picker in

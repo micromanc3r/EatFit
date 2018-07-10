@@ -21,7 +21,7 @@ class ComponentRatioViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        generateLayout()
+        prepareLayout()
         viewModel.delegate = self
     }
 
@@ -35,7 +35,7 @@ class ComponentRatioViewController: UIViewController {
 }
 
 extension ComponentRatioViewController {
-    func generateLayout() {
+    func prepareLayout() {
         title = R.string.localizable.cr_title()
         view.backgroundColor = .white
 

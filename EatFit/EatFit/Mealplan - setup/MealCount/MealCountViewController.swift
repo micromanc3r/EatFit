@@ -20,7 +20,7 @@ class MealCountViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        generateLayout()
+        prepareLayout()
     }
 
     @objc func confirmSelection() {
@@ -29,7 +29,7 @@ class MealCountViewController: UIViewController {
 }
 
 extension MealCountViewController {
-    func generateLayout() {
+    func prepareLayout() {
         title = R.string.localizable.mc_title()
         view.backgroundColor = .white
 
