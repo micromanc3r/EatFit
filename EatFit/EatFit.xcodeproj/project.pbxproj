@@ -143,11 +143,10 @@
 			isa = PBXGroup;
 			children = (
 				20947944205878C00054EDA4 /* AppDelegate.swift */,
-				6DC3CC9A20E6E40700A2367A /* Storage */,
 				6D306A0420E2B95B0086E0EA /* Coordinators */,
-				6DC3CC8E20E405FB00A2367A /* MealCount */,
-				6DC3CC9120E41AA500A2367A /* ComponentRatio */,
+				6D26971D20F5328E00D2A160 /* Mealplan - setup */,
 				6DCE573120E03E5500AB9E64 /* Model */,
+				6DC3CC9A20E6E40700A2367A /* Storage */,
 				20B264942058848300A95FCF /* R.generated.swift */,
 				2094794B205878C00054EDA4 /* Assets.xcassets */,
 				2094794D205878C00054EDA4 /* LaunchScreen.storyboard */,
@@ -169,6 +168,15 @@
 				2094795B205878C00054EDA4 /* Info.plist */,
 			);
 			path = EatFitTests;
+			sourceTree = "<group>";
+		};
+		6D26971D20F5328E00D2A160 /* Mealplan - setup */ = {
+			isa = PBXGroup;
+			children = (
+				6DC3CC8E20E405FB00A2367A /* MealCount */,
+				6DC3CC9120E41AA500A2367A /* ComponentRatio */,
+			);
+			path = "Mealplan - setup";
 			sourceTree = "<group>";
 		};
 		6D306A0420E2B95B0086E0EA /* Coordinators */ = {
