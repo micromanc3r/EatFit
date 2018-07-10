@@ -9,4 +9,5 @@
 import Foundation
 
 protocol ComponentRatioDelegate: ComponentRatioPickerViewDelegate {
+    func componentsSetupFinished()
 }

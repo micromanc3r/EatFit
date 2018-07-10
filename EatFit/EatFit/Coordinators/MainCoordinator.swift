@@ -74,4 +74,9 @@ extension MainCoordinator: ComponentRatioDelegate {
             crVC.plan = plan
         }
     }
+    
+    func componentsSetupFinished() {
+        MLogger.logVerbose(sender: self,
+                           andMessage: "Components setup finished.")
+    }
 }
