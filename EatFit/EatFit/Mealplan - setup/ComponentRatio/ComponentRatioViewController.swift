@@ -105,7 +105,7 @@ extension ComponentRatioViewController {
     }
     
     private func setupFinishedButton() {
-        let finishBarButtonItem = UIBarButtonItem(title: "Finish",
+        let finishBarButtonItem = UIBarButtonItem(title: R.string.localizable.cr_finish_button(),
                                                   style: .done,
                                                   target: self,
                                                   action: #selector(finishComponentsSetup))

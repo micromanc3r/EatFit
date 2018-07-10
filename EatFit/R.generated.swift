@@ -75,7 +75,7 @@ struct R: Rswift.Validatable {
   
   /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.localizable` struct is generated, and contains static references to 4 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 6 localization keys.
     struct localizable {
       /// Value: Components
       static let cr_title = Rswift.StringResource(key: "cr_title", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
@@ -83,8 +83,12 @@ struct R: Rswift.Validatable {
       static let mc_button = Rswift.StringResource(key: "mc_button", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: EatFit
       static let mc_title = Rswift.StringResource(key: "mc_title", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Finish
+      static let cr_finish_button = Rswift.StringResource(key: "cr_finish_button", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: How many meals?
       static let mc_label_title = Rswift.StringResource(key: "mc_label_title", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: OK
+      static let ok_title = Rswift.StringResource(key: "ok_title", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       
       /// Value: Components
       static func cr_title(_: Void = ()) -> String {
@@ -101,9 +105,19 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("mc_title", bundle: R.hostingBundle, comment: "")
       }
       
+      /// Value: Finish
+      static func cr_finish_button(_: Void = ()) -> String {
+        return NSLocalizedString("cr_finish_button", bundle: R.hostingBundle, comment: "")
+      }
+      
       /// Value: How many meals?
       static func mc_label_title(_: Void = ()) -> String {
         return NSLocalizedString("mc_label_title", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// Value: OK
+      static func ok_title(_: Void = ()) -> String {
+        return NSLocalizedString("ok_title", bundle: R.hostingBundle, comment: "")
       }
       
       fileprivate init() {}

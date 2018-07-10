@@ -31,7 +31,7 @@ extension SetupOkViewController {
     }
     
     private func prepareOkLabel() {
-        okLabel.text = "OK"
+        okLabel.text = R.string.localizable.ok_title()
         okLabel.font = UIFont.systemFont(ofSize: 36,
                                          weight: .heavy)
         view.addSubview(okLabel)

@@ -10,3 +10,5 @@
 "mc_label_title" = "How many meals?";
 "mc_button" = "Confirm";
 "cr_title" = "Components";
+"cr_finish_button" = "Finish";
+"ok_title" = "OK";

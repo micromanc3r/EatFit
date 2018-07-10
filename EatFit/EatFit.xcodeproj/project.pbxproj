@@ -399,7 +399,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "#\"${PODS_ROOT}/SwiftFormat/CommandLineTool/swiftformat\" --commas inline --exclude \"${SRCROOT}\"/Pods/ \"${SRCROOT}\"";
+			shellScript = "\"${PODS_ROOT}/SwiftFormat/CommandLineTool/swiftformat\" --commas inline --exclude \"${SRCROOT}\"/Pods/ \"${SRCROOT}\"";
 		};
 		20B264902058837E00A95FCF /* Run Script - SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
