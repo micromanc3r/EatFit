@@ -7,10 +7,12 @@
 //
 
 import Cartography
+import MicroLogger
 import UIKit
 
 class SelectMealViewController: UIViewController {
     let titleLabel = UILabel()
+    let mealSelector = MealSelectorView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,12 +26,18 @@ extension SelectMealViewController {
         view.backgroundColor = .white
 
         prepareTitleLabel()
+        prepareMealSelector()
 
-        constrain(titleLabel) { titleLabel in
+        constrain(titleLabel, mealSelector) { titleLabel, mealSelector in
             titleLabel.top == titleLabel.superview!.safeAreaLayoutGuide.top + 24
             titleLabel.centerX == titleLabel.superview!.centerX
             titleLabel.left >= titleLabel.superview!.safeAreaLayoutGuide.left + 16
             titleLabel.right <= titleLabel.superview!.safeAreaLayoutGuide.right - 16
+
+            mealSelector.top == titleLabel.bottom + 24
+            mealSelector.centerX == mealSelector.superview!.centerX
+            mealSelector.left >= mealSelector.superview!.safeAreaLayoutGuide.left + 16
+            mealSelector.right <= mealSelector.superview!.safeAreaLayoutGuide.right - 16
         }
     }
 
@@ -38,5 +46,18 @@ extension SelectMealViewController {
         titleLabel.font = UIFont.systemFont(ofSize: 36,
                                             weight: .heavy)
         view.addSubview(titleLabel)
+    }
+
+    private func prepareMealSelector() {
+        mealSelector.prepareLayout(forMealPlan: DefaultMealSettingsStorage().loadMealPlan()!)
+        mealSelector.delegate = self
+        view.addSubview(mealSelector)
+    }
+}
+
+extension SelectMealViewController: MealSelectorDelegate {
+    func didSelect(meal: Int) {
+        MLogger.logVerbose(sender: self,
+                           andMessage: "Selected meal: \(meal)")
     }
 }
