@@ -157,12 +157,12 @@
 				6D26972020F537B600D2A160 /* Meal creation */,
 				6DCE573120E03E5500AB9E64 /* Model */,
 				6DC3CC9A20E6E40700A2367A /* Storage */,
-				20B264942058848300A95FCF /* R.generated.swift */,
 				2094794B205878C00054EDA4 /* Assets.xcassets */,
 				2094794D205878C00054EDA4 /* LaunchScreen.storyboard */,
+				20947950205878C00054EDA4 /* Info.plist */,
+				20B264942058848300A95FCF /* R.generated.swift */,
 				6DC2AC8820E044A000A02C9C /* Localizable.strings */,
 				20B2648D20587AA200A95FCF /* food.csv */,
-				20947950205878C00054EDA4 /* Info.plist */,
 			);
 			path = EatFit;
 			sourceTree = "<group>";
@@ -416,7 +416,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "#\"${PODS_ROOT}/SwiftFormat/CommandLineTool/swiftformat\" --commas inline --exclude \"${SRCROOT}\"/Pods/ \"${SRCROOT}\"";
+			shellScript = "\"${PODS_ROOT}/SwiftFormat/CommandLineTool/swiftformat\" --commas inline --exclude \"${SRCROOT}\"/Pods/ \"${SRCROOT}\"";
 		};
 		20B264902058837E00A95FCF /* Run Script - SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;

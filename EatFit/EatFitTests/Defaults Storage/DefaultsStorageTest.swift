@@ -54,15 +54,15 @@ class DefaultsStorageTest: XCTestCase {
         XCTAssertEqual(5,
                        loadedPlan?.mealCount)
     }
-    
+
     func testSetupFinishedBeforeStore() {
         XCTAssertFalse(storage.mealPlanSetupFinished())
     }
-    
+
     func testSetupFinished() {
         storage.store(mealPlanSetupFinished: false)
         XCTAssertFalse(storage.mealPlanSetupFinished())
-        
+
         storage.store(mealPlanSetupFinished: true)
         XCTAssertTrue(storage.mealPlanSetupFinished())
     }

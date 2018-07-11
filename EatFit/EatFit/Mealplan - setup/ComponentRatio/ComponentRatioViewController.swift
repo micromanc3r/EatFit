@@ -28,7 +28,7 @@ class ComponentRatioViewController: UIViewController {
     @objc func didSelect(meal: UIButton) {
         viewModel.selectedMeal = mealButtons.index(of: meal)!
     }
-    
+
     @objc func finishComponentsSetup() {
         delegate?.componentsSetupFinished()
     }
@@ -103,7 +103,7 @@ extension ComponentRatioViewController {
         view.addSubview(pickerView)
         selected(mealIndex: 0)
     }
-    
+
     private func setupFinishedButton() {
         let finishBarButtonItem = UIBarButtonItem(title: R.string.localizable.cr_finish_button(),
                                                   style: .done,

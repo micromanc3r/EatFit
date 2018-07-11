@@ -9,153 +9,160 @@ import UIKit
 
 /// This `R` struct is generated and contains references to static resources.
 struct R: Rswift.Validatable {
-  fileprivate static let applicationLocale = hostingBundle.preferredLocalizations.first.flatMap(Locale.init) ?? Locale.current
-  fileprivate static let hostingBundle = Bundle(for: R.Class.self)
-  
-  static func validate() throws {
-    try intern.validate()
-  }
-  
-  /// This `R.color` struct is generated, and contains static references to 0 colors.
-  struct color {
-    fileprivate init() {}
-  }
-  
-  /// This `R.file` struct is generated, and contains static references to 1 files.
-  struct file {
-    /// Resource file `food.csv`.
-    static let foodCsv = Rswift.FileResource(bundle: R.hostingBundle, name: "food", pathExtension: "csv")
-    
-    /// `bundle.url(forResource: "food", withExtension: "csv")`
-    static func foodCsv(_: Void = ()) -> Foundation.URL? {
-      let fileResource = R.file.foodCsv
-      return fileResource.bundle.url(forResource: fileResource)
+    fileprivate static let applicationLocale = hostingBundle.preferredLocalizations.first.flatMap(Locale.init) ?? Locale.current
+    fileprivate static let hostingBundle = Bundle(for: R.Class.self)
+
+    static func validate() throws {
+        try intern.validate()
     }
-    
-    fileprivate init() {}
-  }
-  
-  /// This `R.font` struct is generated, and contains static references to 0 fonts.
-  struct font {
-    fileprivate init() {}
-  }
-  
-  /// This `R.image` struct is generated, and contains static references to 0 images.
-  struct image {
-    fileprivate init() {}
-  }
-  
-  /// This `R.nib` struct is generated, and contains static references to 0 nibs.
-  struct nib {
-    fileprivate init() {}
-  }
-  
-  /// This `R.reuseIdentifier` struct is generated, and contains static references to 0 reuse identifiers.
-  struct reuseIdentifier {
-    fileprivate init() {}
-  }
-  
-  /// This `R.segue` struct is generated, and contains static references to 0 view controllers.
-  struct segue {
-    fileprivate init() {}
-  }
-  
-  /// This `R.storyboard` struct is generated, and contains static references to 1 storyboards.
-  struct storyboard {
-    /// Storyboard `LaunchScreen`.
-    static let launchScreen = _R.storyboard.launchScreen()
-    
-    /// `UIStoryboard(name: "LaunchScreen", bundle: ...)`
-    static func launchScreen(_: Void = ()) -> UIKit.UIStoryboard {
-      return UIKit.UIStoryboard(resource: R.storyboard.launchScreen)
+
+    /// This `R.color` struct is generated, and contains static references to 0 colors.
+    struct color {
+        fileprivate init() {}
     }
-    
-    fileprivate init() {}
-  }
-  
-  /// This `R.string` struct is generated, and contains static references to 1 localization tables.
-  struct string {
-    /// This `R.string.localizable` struct is generated, and contains static references to 6 localization keys.
-    struct localizable {
-      /// Value: Components
-      static let cr_title = Rswift.StringResource(key: "cr_title", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
-      /// Value: Confirm
-      static let mc_button = Rswift.StringResource(key: "mc_button", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
-      /// Value: EatFit
-      static let mc_title = Rswift.StringResource(key: "mc_title", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
-      /// Value: Finish
-      static let cr_finish_button = Rswift.StringResource(key: "cr_finish_button", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
-      /// Value: How many meals?
-      static let mc_label_title = Rswift.StringResource(key: "mc_label_title", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
-      /// Value: OK
-      static let ok_title = Rswift.StringResource(key: "ok_title", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
-      
-      /// Value: Components
-      static func cr_title(_: Void = ()) -> String {
-        return NSLocalizedString("cr_title", bundle: R.hostingBundle, comment: "")
-      }
-      
-      /// Value: Confirm
-      static func mc_button(_: Void = ()) -> String {
-        return NSLocalizedString("mc_button", bundle: R.hostingBundle, comment: "")
-      }
-      
-      /// Value: EatFit
-      static func mc_title(_: Void = ()) -> String {
-        return NSLocalizedString("mc_title", bundle: R.hostingBundle, comment: "")
-      }
-      
-      /// Value: Finish
-      static func cr_finish_button(_: Void = ()) -> String {
-        return NSLocalizedString("cr_finish_button", bundle: R.hostingBundle, comment: "")
-      }
-      
-      /// Value: How many meals?
-      static func mc_label_title(_: Void = ()) -> String {
-        return NSLocalizedString("mc_label_title", bundle: R.hostingBundle, comment: "")
-      }
-      
-      /// Value: OK
-      static func ok_title(_: Void = ()) -> String {
-        return NSLocalizedString("ok_title", bundle: R.hostingBundle, comment: "")
-      }
-      
-      fileprivate init() {}
+
+    /// This `R.file` struct is generated, and contains static references to 1 files.
+    struct file {
+        /// Resource file `food.csv`.
+        static let foodCsv = Rswift.FileResource(bundle: R.hostingBundle, name: "food", pathExtension: "csv")
+
+        /// `bundle.url(forResource: "food", withExtension: "csv")`
+        static func foodCsv(_: Void = ()) -> Foundation.URL? {
+            let fileResource = R.file.foodCsv
+            return fileResource.bundle.url(forResource: fileResource)
+        }
+
+        fileprivate init() {}
     }
-    
-    fileprivate init() {}
-  }
-  
-  fileprivate struct intern: Rswift.Validatable {
-    fileprivate static func validate() throws {
-      // There are no resources to validate
+
+    /// This `R.font` struct is generated, and contains static references to 0 fonts.
+    struct font {
+        fileprivate init() {}
     }
-    
+
+    /// This `R.image` struct is generated, and contains static references to 0 images.
+    struct image {
+        fileprivate init() {}
+    }
+
+    /// This `R.nib` struct is generated, and contains static references to 0 nibs.
+    struct nib {
+        fileprivate init() {}
+    }
+
+    /// This `R.reuseIdentifier` struct is generated, and contains static references to 0 reuse identifiers.
+    struct reuseIdentifier {
+        fileprivate init() {}
+    }
+
+    /// This `R.segue` struct is generated, and contains static references to 0 view controllers.
+    struct segue {
+        fileprivate init() {}
+    }
+
+    /// This `R.storyboard` struct is generated, and contains static references to 1 storyboards.
+    struct storyboard {
+        /// Storyboard `LaunchScreen`.
+        static let launchScreen = _R.storyboard.launchScreen()
+
+        /// `UIStoryboard(name: "LaunchScreen", bundle: ...)`
+        static func launchScreen(_: Void = ()) -> UIKit.UIStoryboard {
+            return UIKit.UIStoryboard(resource: R.storyboard.launchScreen)
+        }
+
+        fileprivate init() {}
+    }
+
+    /// This `R.string` struct is generated, and contains static references to 1 localization tables.
+    struct string {
+        /// This `R.string.localizable` struct is generated, and contains static references to 7 localization keys.
+        struct localizable {
+            /// Value: Components
+            static let cr_title = Rswift.StringResource(key: "cr_title", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+            /// Value: Confirm
+            static let mc_button = Rswift.StringResource(key: "mc_button", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+            /// Value: EatFit
+            static let mc_title = Rswift.StringResource(key: "mc_title", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+            /// Value: Finish
+            static let cr_finish_button = Rswift.StringResource(key: "cr_finish_button", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+            /// Value: How many meals?
+            static let mc_label_title = Rswift.StringResource(key: "mc_label_title", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+            /// Value: OK
+            static let ok_title = Rswift.StringResource(key: "ok_title", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+            /// Value: Select meal
+            static let sm_title = Rswift.StringResource(key: "sm_title", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+
+            /// Value: Components
+            static func cr_title(_: Void = ()) -> String {
+                return NSLocalizedString("cr_title", bundle: R.hostingBundle, comment: "")
+            }
+
+            /// Value: Confirm
+            static func mc_button(_: Void = ()) -> String {
+                return NSLocalizedString("mc_button", bundle: R.hostingBundle, comment: "")
+            }
+
+            /// Value: EatFit
+            static func mc_title(_: Void = ()) -> String {
+                return NSLocalizedString("mc_title", bundle: R.hostingBundle, comment: "")
+            }
+
+            /// Value: Finish
+            static func cr_finish_button(_: Void = ()) -> String {
+                return NSLocalizedString("cr_finish_button", bundle: R.hostingBundle, comment: "")
+            }
+
+            /// Value: How many meals?
+            static func mc_label_title(_: Void = ()) -> String {
+                return NSLocalizedString("mc_label_title", bundle: R.hostingBundle, comment: "")
+            }
+
+            /// Value: OK
+            static func ok_title(_: Void = ()) -> String {
+                return NSLocalizedString("ok_title", bundle: R.hostingBundle, comment: "")
+            }
+
+            /// Value: Select meal
+            static func sm_title(_: Void = ()) -> String {
+                return NSLocalizedString("sm_title", bundle: R.hostingBundle, comment: "")
+            }
+
+            fileprivate init() {}
+        }
+
+        fileprivate init() {}
+    }
+
+    fileprivate struct intern: Rswift.Validatable {
+        fileprivate static func validate() throws {
+            // There are no resources to validate
+        }
+
+        fileprivate init() {}
+    }
+
+    fileprivate class Class {}
+
     fileprivate init() {}
-  }
-  
-  fileprivate class Class {}
-  
-  fileprivate init() {}
 }
 
 struct _R {
-  struct nib {
-    fileprivate init() {}
-  }
-  
-  struct storyboard {
-    struct launchScreen: Rswift.StoryboardResourceWithInitialControllerType {
-      typealias InitialController = UIKit.UIViewController
-      
-      let bundle = R.hostingBundle
-      let name = "LaunchScreen"
-      
-      fileprivate init() {}
+    struct nib {
+        fileprivate init() {}
     }
-    
+
+    struct storyboard {
+        struct launchScreen: Rswift.StoryboardResourceWithInitialControllerType {
+            typealias InitialController = UIKit.UIViewController
+
+            let bundle = R.hostingBundle
+            let name = "LaunchScreen"
+
+            fileprivate init() {}
+        }
+
+        fileprivate init() {}
+    }
+
     fileprivate init() {}
-  }
-  
-  fileprivate init() {}
 }
