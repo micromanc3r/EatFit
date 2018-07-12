@@ -1,5 +1,5 @@
 //
-//  MealComposerDelegate.swift
+//  SelectMealDelegate.swift
 //  EatFit
 //
 //  Created by micromanc3r on 12/07/2018.
@@ -8,5 +8,6 @@
 
 import Foundation
 
-protocol MealComposerDelegate: class {
+protocol SelectMealDelegate: class {
+    func selected(meal: Meal)
 }

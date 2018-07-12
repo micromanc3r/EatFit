@@ -9,5 +9,5 @@
 import UIKit
 
 class MealComposerViewController: UIViewController {
-    var delegate: MealComposerDelegate?
+    weak var delegate: MealComposerDelegate?
 }

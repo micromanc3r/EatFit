@@ -14,6 +14,8 @@ class SelectMealViewController: UIViewController {
     let titleLabel = UILabel()
     let mealSelector = MealSelectorView()
 
+    weak var delegate: SelectMealDelegate?
+
     override func viewDidLoad() {
         super.viewDidLoad()
 

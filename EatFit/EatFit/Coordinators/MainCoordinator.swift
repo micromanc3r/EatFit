@@ -102,6 +102,7 @@ extension MainCoordinator: SetupOkDelegate {
         settingsStorage.store(mealPlanSetupFinished: true)
 
         let selectMealVc = SelectMealViewController()
+        selectMealVc.delegate = self
         UIView.transition(with: window,
                           duration: 0.3,
                           options: .transitionCrossDissolve,
@@ -109,5 +110,12 @@ extension MainCoordinator: SetupOkDelegate {
                               self.window.rootViewController = selectMealVc
                           },
                           completion: nil)
+    }
+}
+
+extension MainCoordinator: SelectMealDelegate {
+    func selected(meal: Meal) {
+        MLogger.logVerbose(sender: self,
+                           andMessage: "Meal selected: \(meal.type.rawValue)")
     }
 }
