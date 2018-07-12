@@ -101,12 +101,12 @@ extension MainCoordinator: SetupOkDelegate {
     func canContinue() {
         settingsStorage.store(mealPlanSetupFinished: true)
 
-        let newVc = SelectMealViewController()
+        let selectMealVc = SelectMealViewController()
         UIView.transition(with: window,
                           duration: 0.3,
                           options: .transitionCrossDissolve,
                           animations: {
-                              self.window.rootViewController = newVc
+                              self.window.rootViewController = selectMealVc
                           },
                           completion: nil)
     }
