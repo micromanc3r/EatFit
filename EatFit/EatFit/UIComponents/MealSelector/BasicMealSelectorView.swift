@@ -10,7 +10,13 @@ import Cartography
 import MicroLogger
 import UIKit
 
-class MealSelectorView: UIView {
+protocol MealSelectableView: class where Self: UIView {
+    var delegate: MealSelectorDelegate? { get set }
+    var mealButtons: [UIButton] { get }
+    func prepareLayout(forMealPlan plan: MealPlan)
+}
+
+class BasicMealSelectorView: UIView, MealSelectableView {
     weak var delegate: MealSelectorDelegate?
     var mealButtons = [UIButton]()
 

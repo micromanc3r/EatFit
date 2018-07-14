@@ -47,9 +47,9 @@ class MainCoordinator: Coordinator {
     }
 
     func pushComponentRatioVC() {
-        let componentRatioVC = ComponentRatioViewController()
+        let componentRatioVC = ComponentRatioViewController(mealSelectorView: BasicMealSelectorView(),
+                                                            mealPlan: settingsStorage.loadOrCreateMealPlan())
         componentRatioVC.delegate = self
-        componentRatioVC.plan = settingsStorage.loadOrCreateMealPlan()
         navigationController.pushViewController(componentRatioVC,
                                                 animated: false)
     }

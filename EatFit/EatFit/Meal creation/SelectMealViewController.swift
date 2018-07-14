@@ -10,9 +10,9 @@ import Cartography
 import MicroLogger
 import UIKit
 
-class SelectMealViewController: UIViewController {
+class SelectMealViewController: NIViewController {
     let titleLabel = UILabel()
-    let mealSelector = MealSelectorView()
+    let mealSelector = BasicMealSelectorView()
 
     weak var delegate: SelectMealDelegate?
 

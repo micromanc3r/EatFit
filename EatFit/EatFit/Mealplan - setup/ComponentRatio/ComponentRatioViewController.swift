@@ -10,13 +10,20 @@ import Cartography
 import MicroLogger
 import UIKit
 
-class ComponentRatioViewController: UIViewController {
+class ComponentRatioViewController: NIViewController {
     weak var delegate: ComponentRatioDelegate?
-    var plan: MealPlan?
-    let mealSelectorView = MealSelectorView()
+    var plan: MealPlan
+    let mealSelectorView: MealSelectableView
     let viewModel = ComponentRatioViewModel()
 
     private let pickerView = ComponentRatioPickerView()
+
+    init(mealSelectorView: MealSelectableView, mealPlan plan: MealPlan) {
+        self.plan = plan
+        self.mealSelectorView = mealSelectorView
+
+        super.init()
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,7 +46,7 @@ extension ComponentRatioViewController {
         setupMealSelector()
         setupFinishedButton()
 
-        constrain(pickerView, mealSelectorView) { pickerView, mealSelectorView in
+        constrain(pickerView, (mealSelectorView as! UIView)) { pickerView, mealSelectorView in
             pickerView.center == pickerView.superview!.center
 
             mealSelectorView.top == mealSelectorView.superview!.safeAreaLayoutGuide.top + 16
@@ -50,15 +57,10 @@ extension ComponentRatioViewController {
     }
 
     private func setupMealSelector() {
-        if let plan = plan {
-            mealSelectorView.prepareLayout(forMealPlan: plan)
-            mealSelectorView.delegate = self
-        } else {
-            MLogger.logError(sender: self,
-                             andMessage: "Meal plan is nil!")
-        }
+        mealSelectorView.prepareLayout(forMealPlan: plan)
+        mealSelectorView.delegate = self
 
-        view.addSubview(mealSelectorView)
+        view.addSubview(mealSelectorView as! UIView)
     }
 
     private func setupRatioPicker() {
@@ -78,12 +80,6 @@ extension ComponentRatioViewController {
 
 extension ComponentRatioViewController: ComponentRatioViewModelDelegate {
     func selected(mealIndex: Int) {
-        guard let plan = plan else {
-            MLogger.logWarning(sender: self,
-                               andMessage: "Meal plan missing!")
-            return
-        }
-
         pickerView.updatePicker(withMealPlan: plan,
                                 forPosition: mealIndex)
     }
