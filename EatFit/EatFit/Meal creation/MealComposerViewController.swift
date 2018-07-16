@@ -17,20 +17,3 @@ class MealComposerViewController: NIViewController {
         super.init()
     }
 }
-
-class NIViewController: UIViewController {
-    @available(*, unavailable)
-    required init?(coder _: NSCoder) {
-        fatalError("Unavailable")
-    }
-
-    init() {
-        super.init(nibName: nil, bundle: nil)
-    }
-}
-
-class Test {
-    func testfunc() {
-        _ = MealComposerViewController(withMeal: Meal(.breakfast))
-    }
-}
