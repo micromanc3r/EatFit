@@ -89,8 +89,7 @@ extension MainCoordinator: ComponentRatioDelegate {
     func componentsSetupFinished() {
         MLogger.logVerbose(sender: self,
                            andMessage: "Components setup finished.")
-        let setupOkVC = SetupOkViewController()
-        setupOkVC.delegate = self
+        let setupOkVC = SetupOkViewController(withDelegate: self)
         navigationController.pushViewController(setupOkVC,
                                                 animated: true)
         navigationController.setNavigationBarHidden(true, animated: true)

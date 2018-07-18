@@ -9,9 +9,14 @@
 import Cartography
 import UIKit
 
-class SetupOkViewController: UIViewController {
-    weak var delegate: SetupOkDelegate?
+class SetupOkViewController: NIViewController {
+    unowned let delegate: SetupOkDelegate
     let okLabel = UILabel()
+
+    init(withDelegate delegate: SetupOkDelegate) {
+        self.delegate = delegate
+        super.init()
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +30,7 @@ class SetupOkViewController: UIViewController {
         okLabel.bounceIn(duration: 1,
                          delay: 0.1,
                          options: UIViewAnimationOptions.curveEaseInOut) { _ in
-            self.delegate?.canContinue()
+            self.delegate.canContinue()
         }
     }
 }

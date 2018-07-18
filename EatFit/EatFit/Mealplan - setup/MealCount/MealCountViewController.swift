@@ -9,7 +9,7 @@
 import Cartography
 import UIKit
 
-class MealCountViewController: UIViewController {
+class MealCountViewController: NIViewController {
     let countPicker = UIPickerView()
     let titleLabel = UILabel()
     let confirmButton = UIButton()
