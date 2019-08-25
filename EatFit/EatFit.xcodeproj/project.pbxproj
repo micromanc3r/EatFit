@@ -516,7 +516,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-EatFit/Pods-EatFit-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-EatFit/Pods-EatFit-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Cartography/Cartography.framework",
 				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
 				"${BUILT_PRODUCTS_DIR}/microLogger/MicroLogger.framework",
@@ -529,7 +529,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EatFit/Pods-EatFit-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EatFit/Pods-EatFit-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		97DCE237907462C37176ACFD /* [CP] Check Pods Manifest.lock */ = {

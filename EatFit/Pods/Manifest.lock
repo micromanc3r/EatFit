@@ -1,16 +1,16 @@
 PODS:
-  - Cartography (3.0.2)
-  - microLogger (1.0.2)
-  - R.swift (4.0.0):
-    - R.swift.Library (~> 4.0.0)
-  - R.swift.Library (4.0.0)
-  - SwiftFormat/CLI (0.33.7)
+  - Cartography (4.0.0)
+  - microLogger (1.1.0)
+  - R.swift (5.0.3):
+    - R.swift.Library (~> 5.0.0)
+  - R.swift.Library (5.0.1)
+  - SwiftFormat/CLI (0.40.11)
 
 DEPENDENCIES:
-  - Cartography (~> 3.0.2)
-  - microLogger (~> 1.0.2)
-  - R.swift (~> 4.0.0)
-  - SwiftFormat/CLI (~> 0.33.7)
+  - Cartography
+  - microLogger (~> 1.1.0)
+  - R.swift
+  - SwiftFormat/CLI
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -21,12 +21,12 @@ SPEC REPOS:
     - SwiftFormat
 
 SPEC CHECKSUMS:
-  Cartography: 231190d7d0b3107ce8d67c54189f059a509b3760
-  microLogger: 17465f48fe7bee50b2c72fc6b87a4a82d0f949fa
-  R.swift: d6a5ec2f55a8441dc0ed9f1f8b37d7d11ae85c66
-  R.swift.Library: c3af34921024333546e23b70e70d0b4e0cffca75
-  SwiftFormat: 2e9b261a2ded97bc2aff2710c9826c6548a45bdb
+  Cartography: c5626d29056b20f1e95c017326ee4df57cc39ad8
+  microLogger: fe6f36ddc24f9a5d038745e69c19bb49813de896
+  R.swift: f5a87643b91ea569d23d6afb3eee9c743edde239
+  R.swift.Library: cfe85d569d9bae6cb262922db130e7c3a7a5fad1
+  SwiftFormat: 304f39cab266d39c9d60f4fceec37ed6f43b931c
 
-PODFILE CHECKSUM: 8cb8b3cea79f0a7ceefca8b7ab9f418e7f929979
+PODFILE CHECKSUM: 16c6d25635ede9c1392c80db30bac6b7c942f3d2
 
-COCOAPODS: 1.5.2
+COCOAPODS: 1.6.1
