@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol MealSelectorDelegate: class {
+protocol MealSelectorDelegate: AnyObject {
     func didSelect(meal: Int)
 }

@@ -8,4 +8,4 @@
 
 import Foundation
 
-protocol MealComposerDelegate: class {}
+protocol MealComposerDelegate: AnyObject {}

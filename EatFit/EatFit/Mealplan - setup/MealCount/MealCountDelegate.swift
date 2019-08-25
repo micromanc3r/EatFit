@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol MealCountDelegate: class {
+protocol MealCountDelegate: AnyObject {
     func mealCountSelected(count: Int)
     func defaultMealCount() -> Int?
 }

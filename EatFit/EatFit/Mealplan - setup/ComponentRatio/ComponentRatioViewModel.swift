@@ -22,6 +22,6 @@ class ComponentRatioViewModel {
     }
 }
 
-protocol ComponentRatioViewModelDelegate: class {
+protocol ComponentRatioViewModelDelegate: AnyObject {
     func selected(mealIndex: Int)
 }
