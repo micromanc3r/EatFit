@@ -46,7 +46,7 @@ extension ComponentRatioViewController {
         setupMealSelector()
         setupFinishedButton()
 
-        constrain(pickerView, (mealSelectorView as! UIView)) { pickerView, mealSelectorView in
+        constrain(pickerView, mealSelectorView as UIView) { pickerView, mealSelectorView in
             pickerView.center == pickerView.superview!.center
 
             mealSelectorView.top == mealSelectorView.superview!.safeAreaLayoutGuide.top + 16
@@ -60,7 +60,7 @@ extension ComponentRatioViewController {
         mealSelectorView.prepareLayout(forMealPlan: plan)
         mealSelectorView.delegate = self
 
-        view.addSubview(mealSelectorView as! UIView)
+        view.addSubview(mealSelectorView as UIView)
     }
 
     private func setupRatioPicker() {
