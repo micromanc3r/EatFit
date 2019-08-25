@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol SelectMealDelegate: class {
+protocol SelectMealDelegate: AnyObject {
     func selected(meal: Meal)
 }

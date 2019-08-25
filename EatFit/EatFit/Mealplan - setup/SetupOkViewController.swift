@@ -29,7 +29,7 @@ class SetupOkViewController: NIViewController {
 
         okLabel.bounceIn(duration: 1,
                          delay: 0.1,
-                         options: UIViewAnimationOptions.curveEaseInOut) { _ in
+                         options: UIView.AnimationOptions.curveEaseInOut) { _ in
             self.delegate.canContinue()
         }
     }

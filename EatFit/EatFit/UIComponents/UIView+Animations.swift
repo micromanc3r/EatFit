@@ -11,7 +11,7 @@ import UIKit
 extension UIView {
     func hideGracefully(duration: TimeInterval,
                         delay: TimeInterval,
-                        options: UIViewAnimationOptions,
+                        options: UIView.AnimationOptions,
                         completion: ((Bool) -> Void)? = nil) {
         setAlphaGracefully(alpha: 0.0,
                            duration: duration,
@@ -29,7 +29,7 @@ extension UIView {
 
     func showGracefully(duration: TimeInterval,
                         delay: TimeInterval,
-                        options: UIViewAnimationOptions,
+                        options: UIView.AnimationOptions,
                         completion: ((Bool) -> Void)? = nil) {
         setAlphaGracefully(alpha: 1.0,
                            duration: duration,
@@ -48,7 +48,7 @@ extension UIView {
     func setAlphaGracefully(alpha: CGFloat,
                             duration: TimeInterval,
                             delay: TimeInterval,
-                            options: UIViewAnimationOptions,
+                            options: UIView.AnimationOptions,
                             completion: ((Bool) -> Void)? = nil) {
         UIView.animate(withDuration: duration,
                        delay: delay,
@@ -61,7 +61,7 @@ extension UIView {
 
     func bounceIn(duration: TimeInterval,
                   delay: TimeInterval,
-                  options: UIViewAnimationOptions,
+                  options: UIView.AnimationOptions,
                   completion: ((Bool) -> Void)? = nil) {
         alpha = 0
         transform = CGAffineTransform(scaleX: 0, y: 0)

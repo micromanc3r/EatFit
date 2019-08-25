@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol SetupOkDelegate: class {
+protocol SetupOkDelegate: AnyObject {
     func canContinue()
 }

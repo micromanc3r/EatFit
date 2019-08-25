@@ -72,6 +72,6 @@ extension ComponentRatioPickerView {
 
 // MARK: - ComponentRatioPickerViewDelegate
 
-protocol ComponentRatioPickerViewDelegate: class {
+protocol ComponentRatioPickerViewDelegate: AnyObject {
     func updated(meal: Meal)
 }

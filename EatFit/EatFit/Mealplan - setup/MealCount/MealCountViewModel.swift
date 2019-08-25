@@ -9,7 +9,6 @@
 import UIKit
 
 class MealCountViewModel: NSObject, UIPickerViewDataSource, UIPickerViewDelegate {
-
     // MARK: - UIPickerViewDataSource
 
     func numberOfComponents(in _: UIPickerView) -> Int {

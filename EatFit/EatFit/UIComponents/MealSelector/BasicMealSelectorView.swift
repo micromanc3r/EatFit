@@ -10,7 +10,7 @@ import Cartography
 import MicroLogger
 import UIKit
 
-protocol MealSelectableView: class where Self: UIView {
+protocol MealSelectableView where Self: UIView {
     var delegate: MealSelectorDelegate? { get set }
     var mealButtons: [UIButton] { get }
     func prepareLayout(forMealPlan plan: MealPlan)
@@ -64,7 +64,7 @@ class BasicMealSelectorView: UIView, MealSelectableView {
     }
 
     @objc func didSelect(meal: UIButton) {
-        let mealIndex = mealButtons.index(of: meal)!
+        let mealIndex = mealButtons.firstIndex(of: meal)!
         delegate?.didSelect(meal: mealIndex)
     }
 }
