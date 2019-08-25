@@ -13,8 +13,15 @@ import UIKit
 class SelectMealViewController: NIViewController {
     let titleLabel = UILabel()
     let mealSelector = BasicMealSelectorView()
+    let mealSettingsStorage: MealSettingsStorage
 
     weak var delegate: SelectMealDelegate?
+
+    init(withStorage mealSettingsStorage: MealSettingsStorage) {
+        self.mealSettingsStorage = mealSettingsStorage
+
+        super.init()
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,7 +58,7 @@ extension SelectMealViewController {
     }
 
     private func prepareMealSelector() {
-        mealSelector.prepareLayout(forMealPlan: DefaultMealSettingsStorage().loadMealPlan()!)
+        mealSelector.prepareLayout(forMealPlan: mealSettingsStorage.loadMealPlan()!)
         mealSelector.delegate = self
         view.addSubview(mealSelector)
     }

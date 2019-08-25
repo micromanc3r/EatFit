@@ -10,14 +10,6 @@
 import XCTest
 
 class MealPlanTest: XCTestCase {
-    override func setUp() {
-        super.setUp()
-    }
-
-    override func tearDown() {
-        super.tearDown()
-    }
-
     func testMealPlanInit() {
         var plan: MealPlan
 

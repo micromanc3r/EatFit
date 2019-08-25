@@ -10,14 +10,6 @@
 import XCTest
 
 class MealComponentsTest: XCTestCase {
-    override func setUp() {
-        super.setUp()
-    }
-
-    override func tearDown() {
-        super.tearDown()
-    }
-
     func testProtein() {
         let protein = Protein(quantity: 5)
 
