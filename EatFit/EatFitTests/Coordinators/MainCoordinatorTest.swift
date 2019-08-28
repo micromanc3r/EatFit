@@ -35,7 +35,7 @@ class MainCoordinatorTest: XCTestCase {
 
         // Then
         XCTAssertNotNil(coordinator.window.rootViewController)
-        XCTAssertTrue(coordinator.window.rootViewController!.isKind(of: SelectMealViewController.self))
+        XCTAssertTrue(((coordinator.window.rootViewController as? UINavigationController)?.viewControllers.first?.isKind(of: SelectMealViewController.self))!)
     }
 }
 

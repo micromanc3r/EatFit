@@ -43,7 +43,11 @@ class MainCoordinator: Coordinator {
     }
 
     func startMainFlow() {
-        window.rootViewController = SelectMealViewController(withStorage: settingsStorage)
+        let selectMealVc = SelectMealViewController(withStorage: settingsStorage)
+        selectMealVc.delegate = self
+        navigationController.viewControllers = [selectMealVc]
+        navigationController.setNavigationBarHidden(true, animated: false)
+        window.rootViewController = navigationController
     }
 
     func pushComponentRatioVC() {
@@ -99,14 +103,11 @@ extension MainCoordinator: ComponentRatioDelegate {
 extension MainCoordinator: SetupOkDelegate {
     func canContinue() {
         settingsStorage.store(mealPlanSetupFinished: true)
-
-        let selectMealVc = SelectMealViewController(withStorage: settingsStorage)
-        selectMealVc.delegate = self
         UIView.transition(with: window,
                           duration: 0.3,
                           options: .transitionCrossDissolve,
                           animations: {
-                              self.window.rootViewController = selectMealVc
+                              self.startMainFlow()
                           },
                           completion: nil)
     }
