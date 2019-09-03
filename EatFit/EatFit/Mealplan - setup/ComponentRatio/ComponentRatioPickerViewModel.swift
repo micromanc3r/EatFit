@@ -31,8 +31,7 @@ class ComponentRatioPickerViewModel: NSObject, UIPickerViewDelegate, UIPickerVie
 
     func pickerView(_: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         guard currentMeal != nil else {
-            MLogger.logWarning(sender: self,
-                               andMessage: "No current meal set - cannot update.")
+            MLogger.logWarning(sender: self, andMessage: "No current meal set - cannot update.")
             return
         }
 

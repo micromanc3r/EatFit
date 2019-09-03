@@ -80,8 +80,7 @@ extension ComponentRatioViewController {
 
 extension ComponentRatioViewController: ComponentRatioViewModelDelegate {
     func selected(mealIndex: Int) {
-        pickerView.updatePicker(withMealPlan: plan,
-                                forPosition: mealIndex)
+        pickerView.updatePicker(withMealPlan: plan, forPosition: mealIndex)
     }
 }
 

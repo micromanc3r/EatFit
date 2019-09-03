@@ -54,9 +54,7 @@ extension MealCountViewController {
     private func setupCountPicker() {
         countPicker.dataSource = viewModel
         countPicker.delegate = viewModel
-        countPicker.selectRow(viewModel.row(fromMealCount: delegate?.defaultMealCount()),
-                              inComponent: 0,
-                              animated: false)
+        countPicker.selectRow(viewModel.row(fromMealCount: delegate?.defaultMealCount()), inComponent: 0, animated: false)
 
         view.addSubview(countPicker)
     }
@@ -69,13 +67,9 @@ extension MealCountViewController {
     }
 
     private func setupConfirmButton() {
-        confirmButton.setTitle(R.string.localizable.mc_button(),
-                               for: .normal)
-        confirmButton.setTitleColor(.black,
-                                    for: .normal)
-        confirmButton.addTarget(self,
-                                action: #selector(confirmSelection),
-                                for: .touchUpInside)
+        confirmButton.setTitle(R.string.localizable.mc_button(), for: .normal)
+        confirmButton.setTitleColor(.black, for: .normal)
+        confirmButton.addTarget(self, action: #selector(confirmSelection), for: .touchUpInside)
 
         view.addSubview(confirmButton)
     }

@@ -47,8 +47,7 @@ class MealPlan: Codable {
                 Meal(.dinner2)
             ]
         } else {
-            MLogger.logError(sender: MealPlan.self,
-                             andMessage: "Invalid meal count.")
+            MLogger.logError(sender: MealPlan.self, andMessage: "Invalid meal count.")
             meals = [Meal]()
         }
     }

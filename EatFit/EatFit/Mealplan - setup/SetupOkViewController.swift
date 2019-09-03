@@ -27,9 +27,7 @@ class SetupOkViewController: NIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
-        okLabel.bounceIn(duration: 1,
-                         delay: 0.1,
-                         options: UIView.AnimationOptions.curveEaseInOut) { _ in
+        okLabel.bounceIn(duration: 1, delay: 0.1, options: UIView.AnimationOptions.curveEaseInOut) { _ in
             self.delegate.canContinue()
         }
     }
@@ -49,8 +47,7 @@ extension SetupOkViewController {
     private func prepareOkLabel() {
         okLabel.alpha = 0.0
         okLabel.text = R.string.localizable.ok_title()
-        okLabel.font = UIFont.systemFont(ofSize: 36,
-                                         weight: .heavy)
+        okLabel.font = UIFont.systemFont(ofSize: 36, weight: .heavy)
         view.addSubview(okLabel)
     }
 }

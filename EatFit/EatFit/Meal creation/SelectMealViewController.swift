@@ -52,8 +52,7 @@ extension SelectMealViewController {
 
     private func prepareTitleLabel() {
         titleLabel.text = R.string.localizable.sm_title()
-        titleLabel.font = UIFont.systemFont(ofSize: 36,
-                                            weight: .heavy)
+        titleLabel.font = UIFont.systemFont(ofSize: 36, weight: .heavy)
         view.addSubview(titleLabel)
     }
 
@@ -66,7 +65,6 @@ extension SelectMealViewController {
 
 extension SelectMealViewController: MealSelectorDelegate {
     func didSelect(meal: Int) {
-        MLogger.logVerbose(sender: self,
-                           andMessage: "Selected meal: \(meal)")
+        MLogger.logVerbose(sender: self, andMessage: "Selected meal: \(meal)")
     }
 }

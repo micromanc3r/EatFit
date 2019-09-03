@@ -25,13 +25,10 @@ class BasicMealSelectorView: UIView, MealSelectableView {
 
         for meal in plan.meals {
             let mealButton = UIButton(frame: .zero)
-            mealButton.addTarget(self,
-                                 action: #selector(didSelect(meal:)),
-                                 for: .touchUpInside)
-            mealButton.setTitleColor(.black,
-                                     for: .normal)
-            mealButton.setTitle("\(meal.type.rawValue.first ?? "-")",
-                                for: .normal)
+            mealButton.addTarget(self, action: #selector(didSelect(mealButton:)), for: .touchUpInside)
+            mealButton.setTitleColor(.black, for: .normal)
+            mealButton.setTitleColor(.red, for: .selected)
+            mealButton.setTitle("\(meal.type.rawValue.first ?? "-")", for: .normal)
 
             mealButtons.append(mealButton)
             addSubview(mealButton)
@@ -63,8 +60,19 @@ class BasicMealSelectorView: UIView, MealSelectableView {
         }
     }
 
-    @objc func didSelect(meal: UIButton) {
-        let mealIndex = mealButtons.firstIndex(of: meal)!
+    private func selectButton(withIndex selected: Int) {
+        for index in 0 ..< mealButtons.count {
+            if index == selected {
+                mealButtons[index].isSelected = true
+            } else {
+                mealButtons[index].isSelected = false
+            }
+        }
+    }
+
+    @objc func didSelect(mealButton: UIButton) {
+        let mealIndex = mealButtons.firstIndex(of: mealButton)!
+        selectButton(withIndex: mealIndex)
         delegate?.didSelect(meal: mealIndex)
     }
 }

@@ -63,9 +63,7 @@ extension ComponentRatioPickerView {
         pickerModel.currentMeal = meal
 
         for index in 0 ..< meal.components.count {
-            picker.selectRow(meal.components[index].quantity,
-                             inComponent: index,
-                             animated: true)
+            picker.selectRow(meal.components[index].quantity, inComponent: index, animated: true)
         }
     }
 }

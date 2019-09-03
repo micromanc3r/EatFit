@@ -14,8 +14,7 @@ class ComponentRatioViewModel {
 
     var selectedMeal = 0 {
         didSet {
-            MLogger.logVerbose(sender: self,
-                               andMessage: "\(selectedMeal)") // cannot be nil
+            MLogger.logVerbose(sender: self, andMessage: "\(selectedMeal)") // cannot be nil
 
             delegate?.selected(mealIndex: selectedMeal)
         }

@@ -32,8 +32,7 @@ class MainCoordinator: Coordinator {
         let mealCount = settingsStorage.loadMealsPerDay()
         let mealCountVC = MealCountViewController()
         mealCountVC.delegate = self
-        navigationController.pushViewController(mealCountVC,
-                                                animated: false)
+        navigationController.pushViewController(mealCountVC, animated: false)
 
         if mealCount != nil {
             pushComponentRatioVC()
@@ -51,18 +50,15 @@ class MainCoordinator: Coordinator {
     }
 
     func pushComponentRatioVC() {
-        let componentRatioVC = ComponentRatioViewController(mealSelectorView: BasicMealSelectorView(),
-                                                            mealPlan: settingsStorage.loadOrCreateMealPlan())
+        let componentRatioVC = ComponentRatioViewController(mealSelectorView: BasicMealSelectorView(), mealPlan: settingsStorage.loadOrCreateMealPlan())
         componentRatioVC.delegate = self
-        navigationController.pushViewController(componentRatioVC,
-                                                animated: false)
+        navigationController.pushViewController(componentRatioVC, animated: false)
     }
 }
 
 extension MainCoordinator: MealCountDelegate {
     func mealCountSelected(count: Int) {
-        MLogger.logVerbose(sender: self,
-                           andMessage: "Selected meal count: \(count)")
+        MLogger.logVerbose(sender: self, andMessage: "Selected meal count: \(count)")
 
         settingsStorage.store(mealsPerDay: count)
 
@@ -77,8 +73,7 @@ extension MainCoordinator: MealCountDelegate {
 extension MainCoordinator: ComponentRatioDelegate {
     func updated(meal: Meal) {
         guard let plan = settingsStorage.loadMealPlan() else {
-            MLogger.logWarning(sender: self,
-                               andMessage: "No meal plan found.")
+            MLogger.logWarning(sender: self, andMessage: "No meal plan found.")
             return
         }
 
@@ -91,11 +86,9 @@ extension MainCoordinator: ComponentRatioDelegate {
     }
 
     func componentsSetupFinished() {
-        MLogger.logVerbose(sender: self,
-                           andMessage: "Components setup finished.")
+        MLogger.logVerbose(sender: self, andMessage: "Components setup finished.")
         let setupOkVC = SetupOkViewController(withDelegate: self)
-        navigationController.pushViewController(setupOkVC,
-                                                animated: true)
+        navigationController.pushViewController(setupOkVC, animated: true)
         navigationController.setNavigationBarHidden(true, animated: true)
     }
 }
@@ -115,7 +108,6 @@ extension MainCoordinator: SetupOkDelegate {
 
 extension MainCoordinator: SelectMealDelegate {
     func selected(meal: Meal) {
-        MLogger.logVerbose(sender: self,
-                           andMessage: "Meal selected: \(meal.type.rawValue)")
+        MLogger.logVerbose(sender: self, andMessage: "Meal selected: \(meal.type.rawValue)")
     }
 }
