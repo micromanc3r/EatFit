@@ -65,6 +65,6 @@ extension SelectMealViewController {
 
 extension SelectMealViewController: MealSelectorDelegate {
     func didSelect(meal: Int) {
-        MLogger.logVerbose(sender: self, andMessage: "Selected meal: \(meal)")
+        "Selected meal: \(meal)".logVerbose(sender: self)
     }
 }

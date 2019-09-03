@@ -119,3 +119,21 @@ public class MLogger {
     }
     
 }
+
+extension String {
+    public func logVerbose(sender: Any) {
+        MLogger.logVerbose(sender: sender, andMessage: self)
+    }
+    
+    public func logDebug(sender: Any) {
+        MLogger.logDebug(sender: sender, andMessage: self)
+    }
+    
+    public func logWarning(sender: Any) {
+        MLogger.logWarning(sender: sender, andMessage: self)
+    }
+    
+    public func logError(sender: Any) {
+        MLogger.logError(sender: sender, andMessage: self)
+    }
+}
