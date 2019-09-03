@@ -16,11 +16,6 @@ struct R: Rswift.Validatable {
         try intern.validate()
     }
 
-    /// This `R.color` struct is generated, and contains static references to 0 colors.
-    struct color {
-        fileprivate init() {}
-    }
-
     /// This `R.file` struct is generated, and contains static references to 1 files.
     struct file {
         /// Resource file `food.csv`.
@@ -32,31 +27,6 @@ struct R: Rswift.Validatable {
             return fileResource.bundle.url(forResource: fileResource)
         }
 
-        fileprivate init() {}
-    }
-
-    /// This `R.font` struct is generated, and contains static references to 0 fonts.
-    struct font {
-        fileprivate init() {}
-    }
-
-    /// This `R.image` struct is generated, and contains static references to 0 images.
-    struct image {
-        fileprivate init() {}
-    }
-
-    /// This `R.nib` struct is generated, and contains static references to 0 nibs.
-    struct nib {
-        fileprivate init() {}
-    }
-
-    /// This `R.reuseIdentifier` struct is generated, and contains static references to 0 reuse identifiers.
-    struct reuseIdentifier {
-        fileprivate init() {}
-    }
-
-    /// This `R.segue` struct is generated, and contains static references to 0 view controllers.
-    struct segue {
         fileprivate init() {}
     }
 
@@ -135,7 +105,7 @@ struct R: Rswift.Validatable {
 
     fileprivate struct intern: Rswift.Validatable {
         fileprivate static func validate() throws {
-            // There are no resources to validate
+            try _R.validate()
         }
 
         fileprivate init() {}
@@ -146,17 +116,25 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
 }
 
-struct _R {
-    struct nib {
-        fileprivate init() {}
+struct _R: Rswift.Validatable {
+    static func validate() throws {
+        try storyboard.validate()
     }
 
-    struct storyboard {
-        struct launchScreen: Rswift.StoryboardResourceWithInitialControllerType {
+    struct storyboard: Rswift.Validatable {
+        static func validate() throws {
+            try launchScreen.validate()
+        }
+
+        struct launchScreen: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
             typealias InitialController = UIKit.UIViewController
 
             let bundle = R.hostingBundle
             let name = "LaunchScreen"
+
+            static func validate() throws {
+                if #available(iOS 11.0, *) {}
+            }
 
             fileprivate init() {}
         }
