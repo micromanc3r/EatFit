@@ -27,6 +27,7 @@
 		6D2B0CF823132C280093F414 /* MainCoordinatorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2B0CF723132C280093F414 /* MainCoordinatorTest.swift */; };
 		6D306A0620E2BA0C0086E0EA /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D306A0520E2BA0C0086E0EA /* MainCoordinator.swift */; };
 		6D306A0820E2BDD90086E0EA /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D306A0720E2BDD90086E0EA /* Coordinator.swift */; };
+		6D43CFC7233F634000B2BAE4 /* MealCountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D43CFC6233F634000B2BAE4 /* MealCountView.swift */; };
 		6D80776B20F7F05900009016 /* MealComposerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D80776A20F7F05900009016 /* MealComposerViewController.swift */; };
 		6D80776D20F7F0B200009016 /* MealComposerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D80776C20F7F0B200009016 /* MealComposerDelegate.swift */; };
 		6D80776F20F7F1EC00009016 /* SelectMealDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D80776E20F7F1EC00009016 /* SelectMealDelegate.swift */; };
@@ -85,6 +86,7 @@
 		6D2B0CF723132C280093F414 /* MainCoordinatorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinatorTest.swift; sourceTree = "<group>"; };
 		6D306A0520E2BA0C0086E0EA /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		6D306A0720E2BDD90086E0EA /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		6D43CFC6233F634000B2BAE4 /* MealCountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealCountView.swift; sourceTree = "<group>"; };
 		6D80776A20F7F05900009016 /* MealComposerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealComposerViewController.swift; sourceTree = "<group>"; };
 		6D80776C20F7F0B200009016 /* MealComposerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealComposerDelegate.swift; sourceTree = "<group>"; };
 		6D80776E20F7F1EC00009016 /* SelectMealDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectMealDelegate.swift; sourceTree = "<group>"; };
@@ -260,6 +262,7 @@
 				6DC3CC8F20E416F500A2367A /* MealCountDelegate.swift */,
 				6DC3CC8A20E405D300A2367A /* MealCountViewModel.swift */,
 				6DC3CC8C20E405F600A2367A /* MealCount.swift */,
+				6D43CFC6233F634000B2BAE4 /* MealCountView.swift */,
 			);
 			path = MealCount;
 			sourceTree = "<group>";
@@ -601,6 +604,7 @@
 				6D80776F20F7F1EC00009016 /* SelectMealDelegate.swift in Sources */,
 				20B264952058848400A95FCF /* R.generated.swift in Sources */,
 				6D26972620F53B9E00D2A160 /* UIView+Animations.swift in Sources */,
+				6D43CFC7233F634000B2BAE4 /* MealCountView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -689,7 +693,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -742,7 +746,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
